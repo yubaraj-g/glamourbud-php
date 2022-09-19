@@ -84,12 +84,10 @@ p {
 
 .c-control-prev {
     left: -1rem;
-    /* background: linear-gradient(to right, rgba(59, 113, 202, 0.3), #00000000); */
     background: linear-gradient(to right, rgba(255, 255, 255, 0.9), #00000000);
 }
 .c-control-next {
     right: -1rem;
-    /* background: linear-gradient(to left, rgba(59, 113, 202, 0.3), #00000000); */
     background: linear-gradient(to left, rgba(255, 255, 255, 0.9), #00000000);
 }
 
@@ -142,3 +140,66 @@ p {
     margin-left: 5px;
 }
 
+.mobile-show {
+    display: none;
+}
+
+.cards-large-show {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 991px) {
+    .mobile-show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-mobile {
+        width: 100%;
+        padding: 50px 0;
+        /* overflow: hidden; */
+        
+    }
+
+    .cards-large-show {
+        display: none;
+    }
+
+    .card {
+        margin: 4rem 2rem 4rem 2rem;
+
+    }
+
+    .card-img-top{
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+    }
+
+    .c-control-prev {
+        left: 10;
+        /* background: linear-gradient(to right, rgba(255, 255, 255, 0.9), #00000000); */
+        color: white;
+    }
+    .c-control-next {
+        right: 10;
+        /* background: linear-gradient(to left, rgba(255, 255, 255, 0.9), #00000000); */
+        color: white;
+    }
+
+    .z-99 {
+        z-index: 99;
+    }
+
+    .carousel-inner {
+        border-radius: 1rem;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .font-small {
+        font-size: 17px;
+    }
+
+}

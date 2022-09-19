@@ -211,8 +211,8 @@ if (!$userSession) {
 
     <!-- navbar ended -->
 
-
-    <div class="container my-4 mx-4 w-full">
+    <!-- Carousel first -->
+    <div class="container my-4 mx-4 w-full cards-large-show">
 
         <div class="d-flex section-headings">
             <p class="text-light bg-primary rounded px-2 py-1 fw-semibold">The Premium Provisions from Glamourbud <img src="./img/premium-icon.png" alt="premium-icon" width="28" height="25"></p>
@@ -635,45 +635,686 @@ if (!$userSession) {
     </div>
 
 
+    <!-- Carousel mobile -->
 
+    <div class="container my-4 mx-4 w-full mobile-show">
+        <div class="d-flex section-headings">
+            <p class="text-light bg-primary rounded px-2 py-1 fw-semibold">The Premium Provisions from Glamourbud <img src="./img/premium-icon.png" alt="premium-icon" width="28" height="25"></p>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row px-5 gap">
-
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <div class="row px-5 gap">
-
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <div class="row px-5 gap">
-
-                </div>
-            </div>
+            <p class="mx-3 fw-normal">Book from your choice of budstation</p>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-wrapper">
+            <div id="carouselExampleControls2" class="carousel slide cards-mobile" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <!-- <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div> -->
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev z-99" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next z-99" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
     </div>
 
 
+    <!-- Carousel second -->
+    <div class="container my-4 mx-4 w-full cards-large-show">
+
+        <div class="d-flex section-headings">
+            <p class="text-light bg-primary rounded px-2 py-1 fw-semibold">Available Budstations Near You <img src="./img/premium-icon.png" alt="premium-icon" width="28" height="25"></p>
+
+            <p class="mx-3 fw-normal">Book from your choice of budstation</p>
+        </div>
+
+
+        <!-- <hr class="my-4"> -->
+
+        <!--Carousel Wrapper-->
+        <div class="carousel-wrapper my-4">
+            <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row px-5 gap">
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="carousel-item">
+                        <div class="row px-5 gap">
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row px-5 gap">
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg px-0 card d-flex flex-col">
+                                <img src="./img/saloninterior.jpg" class="card-img-top" alt="salon-image">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex w-full justify-content-between align-center">
+                                        <h4 class="card-title my-0">DAVID'S</h4>
+                                        <div class="d-flex">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                            <img src="./img/star-fill.png" alt="star-rating">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-center">
+                                        <img src="./img/map-pin.png" alt="map-icon">
+                                        <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                                    </div>
+
+
+                                    <p class="d-flex icon-gap">
+                                        <img src="./img/wifi.png" alt="wifi-icon">
+                                        <img src="./img/tv.png" alt="wifi-icon">
+                                        <img src="./img/cctv.png" alt="wifi-icon">
+                                    </p>
+                                    <div class="d-flex w-full justify-content-between align-center card-btn">
+                                        <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                        <a class="my-0" href="./salonPage.php">Go inside -></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="c-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon prev-ico" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="c-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!--/.Carousel Wrapper-->
+
+
+    </div>
+
+    <!-- Carousel mobile 2 -->
+    <div class="container my-4 mx-4 w-full mobile-show">
+        <div class="d-flex section-headings">
+            <p class="text-light bg-primary rounded px-2 py-1 fw-semibold">Available Budstations Near You <img src="./img/premium-icon.png" alt="premium-icon" width="28" height="25"></p>
+
+            <p class="mx-3 fw-normal">Book from your choice of budstation</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div id="carouselExampleControls4" class="carousel slide cards-mobile" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <!-- <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div> -->
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/saloninterior.jpg" alt="saloninterior" class="d-block w-100">
+                        <div class="card-body d-flex flex-column justify-content-between row-gaps-10">
+                            <div class="d-flex w-full justify-content-between align-center">
+                                <h4 class="card-title my-0">DAVID'S</h4>
+                                <div class="d-flex">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                    <img src="./img/star-fill.png" alt="star-rating">
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-center">
+                                <img src="./img/map-pin.png" alt="map-icon">
+                                <p class="d-flex align-center card-text font-small fw-light m-left-5">Rajgarh Road, House No.12, 2nd floor left</p>
+                            </div>
+
+
+                            <p class="d-flex icon-gap">
+                                <img src="./img/wifi.png" alt="wifi-icon">
+                                <img src="./img/tv.png" alt="wifi-icon">
+                                <img src="./img/cctv.png" alt="wifi-icon">
+                            </p>
+                            <div class="d-flex w-full justify-content-between align-center card-btn">
+                                <a class="btn btn-primary align-center" href="./salonPage.php">Book now</a>
+                                <a class="my-0" href="./salonPage.php">Go inside -></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev z-99" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next z-99" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
         <button class="btn btn-primary" name="logout" type="submit">Logout</button>
     </form>
-
-
-
 
     <!-- if (isset($_POST['logout'])) {
         $sessionClose = session_destroy();
@@ -684,8 +1325,6 @@ if (!$userSession) {
 
         echo "<script>console.log('session closed');</script>";
     } -->
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
