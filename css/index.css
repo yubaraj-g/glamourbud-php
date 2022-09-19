@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/* :root {
+
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    font-family: 'Roboto', sans-serif;
+    /* overflow: hidden; */
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.margin-r-5 {
+    margin-right: 5%;
+}
+
+.btn-text-wrapper {
+    margin: 0 auto;
+}
+
+.btn-text-wrapper p {
+    margin-bottom: 0;
+    text-align: start;
+}
+
+.btn-text-wrapper p:first-child {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.btn-text-wrapper p:last-child {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.signin-btn {
+    align-items:center;
+}
+
+.section-headings {
+    align-items: center;
+}
+.section-headings p{
+    margin-bottom: 0;
+}
+.section-headings p:first-child {
+    color: #f5f5f5;
+}
+
+.c-control-prev, .c-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateY(-50);
+    z-index: 2;
+    align-items: center;
+    width: 5%;
+    padding: 0;
+    color: #000;
+    text-align: center;
+    /* background: none; */
+    border: 0;
+    opacity: 0.9;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+}
+
+.c-control-prev {
+    left: -1rem;
+    /* background: linear-gradient(to right, rgba(59, 113, 202, 0.3), #00000000); */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), #00000000);
+}
+.c-control-next {
+    right: -1rem;
+    /* background: linear-gradient(to left, rgba(59, 113, 202, 0.3), #00000000); */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.9), #00000000);
+}
+
+.gap {
+    gap: 40px;
+}
+
+.gap-5 {
+    gap: 5%;
+}
+
+.icon-gap {
+    gap: 1rem;
+}
+
+.row-gaps-10 {
+    gap: 10px;
+}
+
+.w-full {
+    width: 100%;
+}
+.w-max35 {
+    max-width: 35%;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+}
+
+.container {
+    min-width: fit-content;
+    max-width: 100%;
+}
+
+.carousel-item {
+    padding-bottom: 2rem;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.font-small {
+    font-size: 14px;
+}
+
+.m-left-5{
+    margin-left: 5px;
+}
+
