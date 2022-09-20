@@ -357,9 +357,6 @@ if (!$userSession) {
                         </div>
                     </div>
 
-
-
-
                     <div class="carousel-item">
                         <div class="row px-5 gap">
                             <div class="col-lg px-0 card d-flex flex-col">
@@ -489,6 +486,7 @@ if (!$userSession) {
 
                         </div>
                     </div>
+                    
                     <div class="carousel-item">
                         <div class="row px-5 gap">
                             <div class="col-lg px-0 card d-flex flex-col">
@@ -619,6 +617,7 @@ if (!$userSession) {
                         </div>
                     </div>
                 </div>
+                
                 <button class="c-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon prev-ico" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
