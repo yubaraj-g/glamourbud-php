@@ -2,6 +2,25 @@
 session_start();
 
 include("./dbconn.php");
+
+$first_name = "";
+$last_name = "";
+$city = "";
+$email = "";
+$password = "";
+$c_password = "";
+
+if($_SERVER['REQUEST_METHOD' == 'POST']) {
+    $first_name = $_POST['fname'];
+    $last_name = $_POST['lname'];
+    $city = $_POST['city'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $c_password = $_POST['cpassword'];
+}
+
+// more php needed.
+
 ?>
 
 <!doctype html>
@@ -10,7 +29,7 @@ include("./dbconn.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="glamourbud signup, glamourbud create account, create acount glamourbud">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <title>GlamourBud - Log In</title>
@@ -97,20 +116,20 @@ include("./dbconn.php");
 <body class="text-center">
 
     <main class="form-signin w-100 m-auto">
-        <form action="" method="POST">
+        <form action="#" method="POST">
             <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal">Create your account</h1>
 
             <div class="form-floating">
-                <input type="text" class="f-name form-control" id="floatingInputFirstName" placeholder="name@example.com">
+                <input type="text" class="f-name form-control" name="fname" id="floatingInputFirstName" placeholder="name@example.com" value="<?php echo $first_name; ?>">
                 <label for="floatingInput">First Name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="l-name form-control" id="floatingInputLastName" placeholder="name@example.com">
+                <input type="text" class="l-name form-control" name="lname" id="floatingInputLastName" placeholder="name@example.com" value="<?php echo $last_name; ?>">
                 <label for="floatingInput">Last Name</label>
             </div>
 
-            <select class="form-select mb-3" aria-label="Default select example">
+            <select class="form-select mb-3" aria-label="Default select example" name="city" value="<?php echo $city; ?>">
                 <option selected>Select your city</option>
                 <option value="1">Guwahati</option>
                 <option value="2">Nagaon</option>
@@ -121,15 +140,15 @@ include("./dbconn.php");
             </select>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" id="floatingInputEmail" placeholder="name@example.com" value="<?php echo $email; ?>">
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" value="<?php echo $password; ?>">
                 <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="c-pass form-control" id="floatingPasswordConfirm" placeholder="Password">
+                <input type="password" class="c-pass form-control" name="cpassword" id="floatingPasswordConfirm" placeholder="Password" value="<?php echo $c_password; ?>">
                 <label for="floatingPassword">Confirm Password</label>
             </div>
 
@@ -151,9 +170,32 @@ include("./dbconn.php");
 
 
     <?php
-        if(isset($_POST['createAccount'])){
-            echo "Account Created.";
+
+        
+
+        $sql = "INSERT INTO users VALUES ('$first_name',
+        '$last_name','$city','$email','$password','$c_password')";
+
+        // if(mysqli_query($conn, )) {
+
+        // }
+
+
+
+        if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
+            echo 
+            "<script>
+                alert('Account Created.');
+            </script>";
+        } else {
+            echo 
+            "<script>
+                alert('Account Creation Failed! Try Again!');
+            </script>";
+            
         }
+
+        mysqli_close
     ?>
 
 
