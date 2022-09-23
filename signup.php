@@ -3,24 +3,6 @@ session_start();
 
 include("./dbconn.php");
 
-$first_name = "";
-$last_name = "";
-$city = "";
-$email = "";
-$password = "";
-$c_password = "";
-
-if($_SERVER['REQUEST_METHOD' == 'POST']) {
-    $first_name = $_POST['fname'];
-    $last_name = $_POST['lname'];
-    $city = $_POST['city'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $c_password = $_POST['cpassword'];
-}
-
-// more php needed.
-
 ?>
 
 <!doctype html>
@@ -116,20 +98,32 @@ if($_SERVER['REQUEST_METHOD' == 'POST']) {
 <body class="text-center">
 
     <main class="form-signin w-100 m-auto">
-        <form action="#" method="POST">
+
+        <!-- php starts -->
+            <!-- if(!empty($errorMessage)) {
+                echo "
+                <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                    <strong>$errorMessage</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                ";
+            } -->
+        <!-- php ends -->
+    
+        <form action="insert.php" method="POST">
             <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal">Create your account</h1>
 
             <div class="form-floating">
-                <input type="text" class="f-name form-control" name="fname" id="floatingInputFirstName" placeholder="name@example.com" value="<?php echo $first_name; ?>">
+                <input type="text" class="f-name form-control" name="fname" id="floatingInputFirstName" placeholder="First Name" required>
                 <label for="floatingInput">First Name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="l-name form-control" name="lname" id="floatingInputLastName" placeholder="name@example.com" value="<?php echo $last_name; ?>">
+                <input type="text" class="l-name form-control" name="lname" id="floatingInputLastName" placeholder="Last Name" required>
                 <label for="floatingInput">Last Name</label>
             </div>
 
-            <select class="form-select mb-3" aria-label="Default select example" name="city" value="<?php echo $city; ?>">
+            <select class="form-select mb-3" aria-label="Default select example" name="city" required>
                 <option selected>Select your city</option>
                 <option value="1">Guwahati</option>
                 <option value="2">Nagaon</option>
@@ -140,23 +134,18 @@ if($_SERVER['REQUEST_METHOD' == 'POST']) {
             </select>
 
             <div class="form-floating">
-                <input type="email" class="form-control" name="email" id="floatingInputEmail" placeholder="name@example.com" value="<?php echo $email; ?>">
+                <input type="email" class="form-control" name="email" id="floatingInputEmail" placeholder="Email address" required>
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" value="<?php echo $password; ?>">
+                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="c-pass form-control" name="cpassword" id="floatingPasswordConfirm" placeholder="Password" value="<?php echo $c_password; ?>">
+                <input type="password" class="c-pass form-control" name="cpassword" id="floatingPasswordConfirm" placeholder="Confirm Password" required>
                 <label for="floatingPassword">Confirm Password</label>
             </div>
 
-            <!-- <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div> -->
             <button class="w-100 btn btn-lg btn-primary fs-6 fw-semibold" type="submit" name="createAccount">Create Account</button>
 
             <p class="mt-3 mb-2">OR</p>
@@ -171,31 +160,39 @@ if($_SERVER['REQUEST_METHOD' == 'POST']) {
 
     <?php
 
-        
-
-        $sql = "INSERT INTO users VALUES ('$first_name',
-        '$last_name','$city','$email','$password','$c_password')";
-
-        // if(mysqli_query($conn, )) {
-
-        // }
-
-
-
-        if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
-            echo 
-            "<script>
-                alert('Account Created.');
-            </script>";
+        if(!$conn) {
+            echo "connection failed." . mysqli_connect_error();
         } else {
-            echo 
-            "<script>
-                alert('Account Creation Failed! Try Again!');
-            </script>";
-            
+            echo "
+            <script>
+                console.log('Signup Page reached.');
+            </script>
+            ";
         }
 
-        mysqli_close
+
+        // $sql = "INSERT INTO users ('first_name','last_name','city','email','password','c_password') VALUES ('$first_name','$last_name','$city','$email','$password','$c_password')";
+
+
+
+        // if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
+        // if(isset($_POST['createAccount'])){
+
+        //     echo 
+        //     "<script>
+        //         alert('Account Created.');
+        //     </script>";
+
+        //     $conn->close();
+        // } else {
+        //     echo 
+        //     "<script>
+        //         alert('Account Creation Failed! Try Again!');
+        //     </script>";
+            
+        // }
+
+        // die();
     ?>
 
 

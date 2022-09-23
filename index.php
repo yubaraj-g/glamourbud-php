@@ -36,7 +36,7 @@ $userSession = $_SESSION['user_email'];
 
 if (!$userSession) {
     header('location: ' . $loginPage);
-    exit();
+    exit;
 
     // script to log the error for accessing the page directly --------------(keep this commented)---------
     // echo "<script>

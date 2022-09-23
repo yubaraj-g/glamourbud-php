@@ -161,18 +161,20 @@ if ($session) {
         //     console.log('$totalRowsData');
         // </script>";
 
-        $redirectPage = './logout.php';
+        // $redirectPage = '/gb-01/logout.php';
+        // $redirectPage = '/gb-php/logout.php';
 
         if ($totalRowsData == 1) {
 
             $_SESSION['user_email'] = $email;
 
-    ?>
+            ?>
             <!-- header('location: ' . $redirectPage);
-                    die(); -->
-            <meta http-equiv="refresh" content="0; url = http://localhost/gb-01/" />
+                     exit(); -->
+            <!-- <meta http-equiv="refresh" content="0; url = http://localhost/gb-01/" /> -->
+            <meta http-equiv="refresh" content="0; url = /gb-php/index.php" />
 
-    <?php
+            <?php
 
         } else if ($totalRowsData > 1) {
             echo
