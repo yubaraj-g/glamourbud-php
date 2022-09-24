@@ -125,12 +125,12 @@ include("./dbconn.php");
 
             <select class="form-select mb-3" aria-label="Default select example" name="city" required>
                 <option selected>Select your city</option>
-                <option value="1">Guwahati</option>
-                <option value="2">Nagaon</option>
-                <option value="3">Tezpur</option>
-                <option value="4">Jorhat</option>
-                <option value="5">Lakhimpur</option>
-                <option value="6">Dibrugarh</option>
+                <option value="Guwahati">Guwahati</option>
+                <option value="Nagaon">Nagaon</option>
+                <option value="Tezpur">Tezpur</option>
+                <option value="Jorhat">Jorhat</option>
+                <option value="Lakhimpur">Lakhimpur</option>
+                <option value="Dibrugarh">Dibrugarh</option>
             </select>
 
             <div class="form-floating">
