@@ -65,12 +65,22 @@ if(!$conn) {
         // calling the number of rows available in our database matching the entered data in this login page.
         $totalRowsData = mysqli_num_rows($runQuery);
 
-        if($totalRowsData > 0) {
+        if($totalRowsData == 1) {
+            $_SESSION['user_email'] = $email;
+
             // redirecting to index page on successful signup ---
-            ?>
-            <meta http-equiv="refresh" content="5; url = http://localhost/gb-php/index.php" />
-            <?php
             
+            // <meta http-equiv="refresh" content="3; url = http://localhost/gb-php/index.php" />
+            
+            header('location: ./index.php');
+            die();
+            
+        } else {
+            echo "
+            <script>
+                alert('Error redirecting to homepage');
+            </script>
+            ";
         }
         
 

@@ -31,6 +31,7 @@ alert_welcome($_SESSION['user_email']);
 // if login fails then go back to login.php (literally comment)
 
 $loginPage = './login.php';
+$homepage = './index.php';
 
 $userSession = $_SESSION['user_email'];
 
@@ -51,7 +52,11 @@ if (!$userSession) {
     die();
 
     echo "<script>console.log('session closed');</script>";
-}
+} 
+// else {
+//     header('location: ' . $homepage);
+//     die();
+// }
 
 ?>
 
