@@ -68,7 +68,7 @@ if(!$conn) {
         if($totalRowsData > 0) {
             // redirecting to index page on successful signup ---
             ?>
-            <meta http-equiv="refresh" content="0; url = http://localhost/gb-php/index.php" />
+            <meta http-equiv="refresh" content="5; url = http://localhost/gb-php/index.php" />
             <?php
             
         }
@@ -79,7 +79,7 @@ if(!$conn) {
         // exit();
         
         // $insertData->close();
-        mysql_close();
+        $conn->close();
     }
 
 
