@@ -170,7 +170,7 @@ if ($session) {
     ?>
             <!-- header('location: ' . $redirectPage);
                     die(); -->
-            <meta http-equiv="refresh" content="0; url = http://localhost/gb-01/" />
+            <meta http-equiv="refresh" content="0; url = http://localhost/gb-php/" />
 
     <?php
 
