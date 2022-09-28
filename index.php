@@ -100,19 +100,19 @@ if (!$userSession) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold d-flex flex-grow-1 justify-content-center">
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="./about.php">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Contact us</a>
+                        <a class="nav-link" href="./contact.php">Contact us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Become an associate</a>
+                        <a class="nav-link" href="./associate-register.php">Become an associate</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Support</a>
+                        <a class="nav-link" href="./support.php">Support</a>
                     </li>
                 </ul>
                 <div class="btn btn-light d-flex signin-btn">
@@ -213,7 +213,6 @@ if (!$userSession) {
             </div>
         </div>
     </nav>
-
     <!-- navbar ended -->
 
     <!-- Carousel first -->

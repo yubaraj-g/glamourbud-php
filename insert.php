@@ -70,10 +70,12 @@ if(!$conn) {
 
             // redirecting to index page on successful signup ---
             
-            // <meta http-equiv="refresh" content="3; url = http://localhost/gb-php/index.php" />
+            ?>
+            <meta http-equiv="refresh" content="0; url = http://localhost/gb-php/index.php" />
+            <?php
             
-            header('location: ./index.php');
-            die();
+            // header('location: ./index.php');
+            // die();
             
         } else {
             echo "
