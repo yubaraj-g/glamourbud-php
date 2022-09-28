@@ -2,6 +2,7 @@
 session_start();
 
 include("./dbconn.php");
+
 ?>
 
 <!doctype html>
@@ -10,7 +11,7 @@ include("./dbconn.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="glamourbud signup, glamourbud create account, create acount glamourbud">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <title>GlamourBud - Log In</title>
@@ -97,47 +98,54 @@ include("./dbconn.php");
 <body class="text-center">
 
     <main class="form-signin w-100 m-auto">
-        <form action="" method="POST">
+
+        <!-- php starts -->
+            <!-- if(!empty($errorMessage)) {
+                echo "
+                <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                    <strong>$errorMessage</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                ";
+            } -->
+        <!-- php ends -->
+    
+        <form action="insert.php" method="POST">
             <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal">Create your account</h1>
 
             <div class="form-floating">
-                <input type="text" class="f-name form-control" id="floatingInputFirstName" placeholder="name@example.com">
+                <input type="text" class="f-name form-control" name="fname" id="floatingInputFirstName" placeholder="First Name" required>
                 <label for="floatingInput">First Name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="l-name form-control" id="floatingInputLastName" placeholder="name@example.com">
+                <input type="text" class="l-name form-control" name="lname" id="floatingInputLastName" placeholder="Last Name" required>
                 <label for="floatingInput">Last Name</label>
             </div>
 
-            <select class="form-select mb-3" aria-label="Default select example">
-                <option selected>Select your city</option>
-                <option value="1">Guwahati</option>
-                <option value="2">Nagaon</option>
-                <option value="3">Tezpur</option>
-                <option value="4">Jorhat</option>
-                <option value="5">Lakhimpur</option>
-                <option value="6">Dibrugarh</option>
+            <select class="form-select mb-3" aria-label="Default select example" name="city" required>
+                <option value="" selected>Select your city</option>
+                <option value="Guwahati">Guwahati</option>
+                <option value="Nagaon">Nagaon</option>
+                <option value="Tezpur">Tezpur</option>
+                <option value="Jorhat">Jorhat</option>
+                <option value="Lakhimpur">Lakhimpur</option>
+                <option value="Dibrugarh">Dibrugarh</option>
             </select>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" id="floatingInputEmail" placeholder="Email address" required>
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="c-pass form-control" id="floatingPasswordConfirm" placeholder="Password">
+                <input type="password" class="c-pass form-control" name="cpassword" id="floatingPasswordConfirm" placeholder="Confirm Password" required>
                 <label for="floatingPassword">Confirm Password</label>
             </div>
 
-            <!-- <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div> -->
             <button class="w-100 btn btn-lg btn-primary fs-6 fw-semibold" type="submit" name="createAccount">Create Account</button>
 
             <p class="mt-3 mb-2">OR</p>
@@ -151,9 +159,40 @@ include("./dbconn.php");
 
 
     <?php
-        if(isset($_POST['createAccount'])){
-            echo "Account Created.";
+
+        if(!$conn) {
+            echo "connection failed." . mysqli_connect_error();
+        } else {
+            echo "
+            <script>
+                console.log('Signup Page reached.');
+            </script>
+            ";
         }
+
+
+        // $sql = "INSERT INTO users ('first_name','last_name','city','email','password','c_password') VALUES ('$first_name','$last_name','$city','$email','$password','$c_password')";
+
+
+
+        // if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
+        // if(isset($_POST['createAccount'])){
+
+        //     echo 
+        //     "<script>
+        //         alert('Account Created.');
+        //     </script>";
+
+        //     $conn->close();
+        // } else {
+        //     echo 
+        //     "<script>
+        //         alert('Account Creation Failed! Try Again!');
+        //     </script>";
+            
+        // }
+
+        // die();
     ?>
 
 
