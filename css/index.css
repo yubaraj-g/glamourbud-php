@@ -203,3 +203,17 @@ p {
     }
 
 }
+
+.booking-cart {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60px;
+}
+
+.booking-cart p{
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}

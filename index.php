@@ -87,7 +87,7 @@ if (!$userSession) {
 <body class="w-full">
 
     <!-- main navbar is here -->
-    <nav class="navbar navbar-expand-lg bg-light px-4 w-full">
+    <nav class="navbar navbar-expand-lg bg-light px-4 w-full" style="height: 70px">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="./img/gb-logo.png" alt="glamourbud-logo" width="120px" height="40px"></a>
 
@@ -136,7 +136,7 @@ if (!$userSession) {
                 <span class="navbar-toggler-icon"></span>
             </button> -->
 
-            <div class="d-flex collapse navbar-collapse px-4 py-2 gap-5 align-center" id="navbarSupportedContent">
+            <div class="d-flex collapse navbar-collapse px-4 py-2 gap-3 align-center" id="navbarSupportedContent">
                 <ul class="d-flex align-center navbar-nav mb-lg-0 d-flex flex-grow-1 justify-content-between fw-normal margin-r-5">
 
                     <!-- <li class="nav-item dropdown">
@@ -152,7 +152,7 @@ if (!$userSession) {
                             <li><a class="dropdown-item" href="#">Show all</a></li>
                         </ul>
                     </li> -->
-                    <li class="nav-item dropdown dropdown-toggle">
+                    <li class="nav-item dropdown dropdown-toggle" style="width: 17%">
                         <select class="nav-link dropdown-menu form-select bg-dark text-light" aria-label="Default select example" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <option selected class="bg-light nav-link text-dark">Select your location</option>
                             <option value="1" class="bg-light text-dark">Guwahati</option>
@@ -209,7 +209,13 @@ if (!$userSession) {
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
 
-
+                <a href="./booking-cart.php" class="btn btn-dark d-flex booking-cart">
+                    <img src="./img/booking-cart.png" alt="profile-icon" width="40px" height="40px">
+                    <div class="d-flex flex-column btn-text-wrapper">
+                        <p>Your</p>
+                        <p>Bookings</p>
+                    </div>
+                </a>
             </div>
         </div>
     </nav>
