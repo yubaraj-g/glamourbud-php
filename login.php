@@ -106,10 +106,11 @@ if ($session) {
     <link href="./css/signin.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column">
+    <img src="./img/gb-logo.png" alt="glamourbud-logo" width="120px" height="40px">
     <main class="form-signin w-100 m-auto text-center">
         <form action="#" method="POST" autocomplete="off">
-            <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <!-- <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
 
             <h1 class="h3 mb-3 fw-semibold">Please log in</h1>
 

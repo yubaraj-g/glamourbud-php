@@ -90,12 +90,14 @@ include("./dbconn.php");
     <link href="./css/signin.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body class="d-flex flex-column text-center">
+
+    <img src="./img/gb-logo.png" alt="glamourbud-logo" width="120px" height="40px">
 
     <main class="form-signin w-100 m-auto">
 
         <!-- php starts -->
-            <!-- if(!empty($errorMessage)) {
+        <!-- if(!empty($errorMessage)) {
                 echo "
                 <div class='alert alert-warning alert-dismissible fade show' role='alert'>
                     <strong>$errorMessage</strong>
@@ -104,9 +106,9 @@ include("./dbconn.php");
                 ";
             } -->
         <!-- php ends -->
-    
+
         <form action="insert.php" method="POST">
-            <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <!-- <img class="mb-4" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
             <h1 class="h3 mb-3 fw-normal">Create your account</h1>
 
             <div class="form-floating">
@@ -155,39 +157,39 @@ include("./dbconn.php");
 
     <?php
 
-        if(!$conn) {
-            echo "connection failed." . mysqli_connect_error();
-        } else {
-            echo "
+    if (!$conn) {
+        echo "connection failed." . mysqli_connect_error();
+    } else {
+        echo "
             <script>
                 console.log('Signup Page reached.');
             </script>
             ";
-        }
+    }
 
 
-        // $sql = "INSERT INTO users ('first_name','last_name','city','email','password','c_password') VALUES ('$first_name','$last_name','$city','$email','$password','$c_password')";
+    // $sql = "INSERT INTO users ('first_name','last_name','city','email','password','c_password') VALUES ('$first_name','$last_name','$city','$email','$password','$c_password')";
 
 
 
-        // if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
-        // if(isset($_POST['createAccount'])){
+    // if(isset($_POST['createAccount']) && mysqli_query($conn, $sql)){
+    // if(isset($_POST['createAccount'])){
 
-        //     echo 
-        //     "<script>
-        //         alert('Account Created.');
-        //     </script>";
+    //     echo 
+    //     "<script>
+    //         alert('Account Created.');
+    //     </script>";
 
-        //     $conn->close();
-        // } else {
-        //     echo 
-        //     "<script>
-        //         alert('Account Creation Failed! Try Again!');
-        //     </script>";
-            
-        // }
+    //     $conn->close();
+    // } else {
+    //     echo 
+    //     "<script>
+    //         alert('Account Creation Failed! Try Again!');
+    //     </script>";
 
-        // die();
+    // }
+
+    // die();
     ?>
 
 

@@ -63,8 +63,13 @@
     </nav>
 
     <!-- 2nd navbar starts here -->
+    <!-- 2nd navbar starts here -->
     <nav class="nav2 navbar-dark navbar-expand-lg bg-dark w-full">
         <div class="container-fluid w-full">
+
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
 
             <div class="d-flex collapse navbar-collapse px-4 py-2 gap-3 align-center" id="navbarSupportedContent">
                 <ul class="d-flex align-center navbar-nav mb-lg-0 d-flex flex-grow-1 justify-content-between fw-normal margin-r-5">
@@ -85,12 +90,25 @@
                     <li class="nav-item dropdown dropdown-toggle" style="width: 17%">
                         <select class="nav-link dropdown-menu form-select bg-dark text-light" aria-label="Default select example" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <option selected class="bg-light nav-link text-dark">Select your location</option>
-                            <option value="1" class="bg-light text-dark">Guwahati</option>
-                            <option value="2" class="bg-light text-dark">Nagaon</option>
-                            <option value="3" class="bg-light text-dark">Tezpur</option>
-                            <option value="4" class="bg-light text-dark">Jorhat</option>
-                            <option value="5" class="bg-light text-dark">Lakhimpur</option>
-                            <option value="6" class="bg-light text-dark">Dibrugarh</option>
+                            <option value="1" class="bg-light text-dark">Azara</option>
+                            <option value="2" class="bg-light text-dark">Bamunimaidan</option>
+                            <option value="3" class="bg-light text-dark">Basistha</option>
+                            <option value="4" class="bg-light text-dark">Beharbari</option>
+                            <option value="5" class="bg-light text-dark">Beltola</option>
+                            <option value="6" class="bg-light text-dark">Bhangagarh</option>
+                            <option value="6" class="bg-light text-dark">Bharalumukh</option>
+                            <option value="6" class="bg-light text-dark">Bhetapara</option>
+                            <option value="6" class="bg-light text-dark">Borbari</option>
+                            <option value="6" class="bg-light text-dark">Borjhar</option>
+                            <option value="6" class="bg-light text-dark">Chandmari</option>
+                            <option value="6" class="bg-light text-dark">Christianbasti</option>
+                            <option value="6" class="bg-light text-dark">Dispur</option>
+                            <option value="6" class="bg-light text-dark">Ganeshguri</option>
+                            <option value="6" class="bg-light text-dark">Geetanagar</option>
+                            <option value="6" class="bg-light text-dark">GS Road</option>
+                            <option value="6" class="bg-light text-dark">Hatigaon</option>
+                            <option value="6" class="bg-light text-dark">Hengerabari</option>
+                            <option value="6" class="bg-light text-dark">Jalukbari</option>
                         </select>
                     </li>
                     <li class="nav-item dropdown">
@@ -98,25 +116,45 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ganeshguri</a></li>
-                            <li><a class="dropdown-item" href="#">Dispur</a></li>
-                            <li>
+                            <li><a class="dropdown-item" href="#">Home Visit</a></li>
+                            <li><a class="dropdown-item" href="#">Parlour Services</a></li>
+                            <li><a class="dropdown-item" href="#">Salon Services</a></li>
+                            <!-- <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Show all</a></li>
+                            </li> -->
+                            <li><a class="dropdown-item" href="#">All Parlours</a></li>
+                            <li><a class="dropdown-item" href="#">All Salons</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ganeshguri</a></li>
-                            <li><a class="dropdown-item" href="#">Dispur</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
+                        <ul class="dropdown-menu specials-regulars">
+                            <li class="specials">
+                                <a class="dropdown-item" href="#">Specials &raquo;</a>
+                                <ul class="specials-ul dropdown-menu dropdown-submenu">
+                                    <li><a href="" class="dropdown-item">Trending</a></li>
+                                    <li><a href="" class="dropdown-item">Traditional</a></li>
+                                    <li><a href="" class="dropdown-item">Bridal</a></li>
+                                    <li><a href="" class="dropdown-item">Grooming</a></li>
+                                </ul>
                             </li>
-                            <li><a class="dropdown-item" href="#">Show all</a></li>
+                            <li class="regulars">
+                                <a class="dropdown-item" href="#">Regular Services &raquo;</a>
+                                <ul class="regulars-ul dropdown-menu dropdown-submenu">
+                                    <li><a href="" class="dropdown-item">Hair Cutting</a></li>
+                                    <li><a href="" class="dropdown-item">Head Massage</a></li>
+                                    <li><a href="" class="dropdown-item">Body Massage</a></li>
+                                    <li><a href="" class="dropdown-item">Hair Styling</a></li>
+                                    <li><a href="" class="dropdown-item">Makeup</a></li>
+                                    <li><a href="" class="dropdown-item">Beard Cutting / Trimming / Styling</a></li>
+                                    <li><a href="" class="dropdown-item">Facial</a></li>
+                                    <li><a href="" class="dropdown-item">Face Massage</a></li>
+                                    <li><a href="" class="dropdown-item">Manicures & Pedicures</a></li>
+                                    <li><a href="" class="dropdown-item">Waxing</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -124,12 +162,12 @@
                             Discounts
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ganeshguri</a></li>
-                            <li><a class="dropdown-item" href="#">Dispur</a></li>
+                            <li><a class="dropdown-item" href="#">1</a></li>
+                            <li><a class="dropdown-item" href="#">2</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Show all</a></li>
+                            <li><a class="dropdown-item" href="#">all</a></li>
                         </ul>
                     </li>
 
@@ -139,7 +177,7 @@
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
 
-                <a href="./booking-cart.php" class="btn btn-dark d-flex booking-cart active">
+                <a href="./booking-cart.php" class="btn btn-dark d-flex booking-cart">
                     <img src="./img/booking-cart.png" alt="profile-icon" width="40px" height="40px">
                     <div class="d-flex flex-column btn-text-wrapper">
                         <p>Your</p>
@@ -255,7 +293,7 @@
                                         <hr class="my-4">
 
                                         <div class="pt-5">
-                                            <h6 class="mb-0"><a href="#!" class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+                                            <h6 class="mb-0"><a href="./index.php" class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
                                         </div>
                                     </div>
                                 </div>
