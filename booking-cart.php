@@ -63,7 +63,6 @@
     </nav>
 
     <!-- 2nd navbar starts here -->
-    <!-- 2nd navbar starts here -->
     <nav class="nav2 navbar-dark navbar-expand-lg bg-dark w-full">
         <div class="container-fluid w-full">
 

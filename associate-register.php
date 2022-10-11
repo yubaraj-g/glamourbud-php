@@ -188,25 +188,22 @@
     </nav>
     <!-- navbar ended -->
 
-    <section class="h-100 h-custom gradient-custom-2">
+    
+    <section class="h-100 h-custom gradient-custom-2 register-section">
+        <h4 class="d-flex justify-content-center w-full mb-2">Welcome to Glamourbud</h4>
+        <h6 class="d-flex justify-content-center w-full">Please provide the necessary information for further processing of your associate application</h6>
+
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
                     <div class="card card-registration card-registration-2" style="border-radius: 15px;">
                         <div class="card-body p-0">
                             <div class="row g-0">
+
+
                                 <div class="col-lg-6">
                                     <div class="p-5">
                                         <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
-
-                                        <div class="mb-4 pb-2">
-                                            <select class="select">
-                                                <option value="1">Title</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                                <option value="4">Four</option>
-                                            </select>
-                                        </div>
 
                                         <div class="row">
                                             <div class="col-md-6 mb-4 pb-2">
@@ -228,44 +225,48 @@
                                         </div>
 
                                         <div class="mb-4 pb-2">
-                                            <select class="select">
-                                                <option value="1">Position</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                                <option value="4">Four</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-4 pb-2">
                                             <div class="form-outline">
                                                 <input type="text" id="form3Examplev4" class="form-control form-control-lg" />
                                                 <label class="form-label" for="form3Examplev4">Position</label>
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row mb-4 pb-2">
                                             <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
 
                                                 <div class="form-outline">
                                                     <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplev5">Bussines Arena</label>
+                                                    <label class="form-label" for="form3Examplev5">Bussiness Arena</label>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-6">
 
                                                 <select class="select">
-                                                    <option value="1">Employees</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                    <option value="4">Four</option>
+                                                    <option value="">Employees</option>
+                                                    <option value="0-20">0-20</option>
+                                                    <option value="20-50">20-50</option>
+                                                    <option value="50+">50+</option>
                                                 </select>
 
                                             </div>
                                         </div>
 
+                                        <div class="mb-4">
+                                            <label class="form-label" for="form3Examplev6">Please upload your Certificate</label>
+                                            <input type="file" id="form3Examplev6" name="upload-certificate" accept="image/png, image/jpeg, application/pdf">
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label class="form-label" for="form3Examplev6">Please upload your parlour photo</label>
+                                            <input type="file" id="form3Examplev6" name="upload-p-image" accept="image/png, image/jpeg">
+                                        </div>
+
                                     </div>
                                 </div>
+
+
+
                                 <div class="col-lg-6 bg-indigo text-white">
                                     <div class="p-5">
                                         <h3 class="fw-normal mb-5">Contact Details</h3>
@@ -273,14 +274,14 @@
                                         <div class="mb-4 pb-2">
                                             <div class="form-outline form-white">
                                                 <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Examplea2">Street + Nr</label>
+                                                <label class="form-label" for="form3Examplea2">Street + House No.</label>
                                             </div>
                                         </div>
 
                                         <div class="mb-4 pb-2">
                                             <div class="form-outline form-white">
                                                 <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Examplea3">Additional Information</label>
+                                                <label class="form-label" for="form3Examplea3">Address Line 2 + Landmark</label>
                                             </div>
                                         </div>
 
@@ -297,7 +298,7 @@
 
                                                 <div class="form-outline form-white">
                                                     <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea5">Place</label>
+                                                    <label class="form-label" for="form3Examplea5">Area</label>
                                                 </div>
 
                                             </div>
@@ -306,16 +307,23 @@
                                         <div class="mb-4 pb-2">
                                             <div class="form-outline form-white">
                                                 <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Examplea6">Country</label>
+                                                <label class="form-label" for="form3Examplea6">City</label>
                                             </div>
                                         </div>
 
-                                        <div class="row">
+                                        <div class="mb-4 pb-2">
+                                            <div class="form-outline form-white">
+                                                <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}" class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Examplea8">Phone Number</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="row">
                                             <div class="col-md-5 mb-4 pb-2">
 
                                                 <div class="form-outline form-white">
                                                     <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea7">Code +</label>
+                                                    <label class="form-label" for="form3Examplea7">PIN CODE</label>
                                                 </div>
 
                                             </div>
@@ -327,7 +335,7 @@
                                                 </div>
 
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <div class="mb-4">
                                             <div class="form-outline form-white">
@@ -348,6 +356,7 @@
 
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
