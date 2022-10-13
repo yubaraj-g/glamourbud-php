@@ -1,4 +1,7 @@
 <?php
+include("./dbconn.php");
+// include("./login.php");
+
 $session = session_start();
 $session;
 
@@ -20,7 +23,7 @@ function alert_welcome($useremail)
 {
     echo
     "<script>
-        console.log('Welcome '.'$useremail');
+        console.log('Welcome ' . '$useremail');
         
     </script>";
 }
@@ -57,6 +60,8 @@ if (!$userSession) {
 //     header('location: ' . $homepage);
 //     die();
 // }
+
+
 
 ?>
 
@@ -118,7 +123,25 @@ if (!$userSession) {
                 <div class="btn btn-light d-flex signin-btn">
                     <img src="./img/gg_profile.png" alt="profile-icon" width="40px" height="40px">
                     <div class="d-flex flex-column btn-text-wrapper">
-                        <p>Hello</p>
+                        <?php
+                            $email = $_SESSION['user_email'];
+
+                            $query = "SELECT * FROM users WHERE email = '$email' ";
+
+                            $runQuery = mysqli_query($conn, $query);
+                            
+                            $totalRowsData = mysqli_num_rows($runQuery);
+                            
+                            if ($totalRowsData == 1) {
+                                while ($row = mysqli_fetch_assoc($runQuery)) {
+                                    echo "<p>Hello" . " " . $row["first_name"] . "</p>";
+                                }
+                            } else {
+                                echo "<p>Hello err_user!</p>
+                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                            }
+                        ?>
+                        <!-- <p>Hello</p> -->
                         <p>Sign in or Sign up</p>
                     </div>
                 </div>
