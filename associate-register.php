@@ -18,7 +18,7 @@ if (!$userSession) {
     die();
 
     echo "<script>console.log('session closed');</script>";
-} 
+}
 ?>
 
 <!doctype html>
@@ -29,6 +29,7 @@ if (!$userSession) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Associate Registration</title>
 
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/associate.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -62,38 +63,38 @@ if (!$userSession) {
                         <a class="nav-link" aria-current="page" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="./about.php">About us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Contact us</a>
+                        <a class="nav-link" href="./contact.php">Contact us</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link disabled" href="#">Become an associate</a>
+                        <a class="nav-link disabled" href="">Become an associate</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Support</a>
+                        <a class="nav-link" href="./support.php">Support</a>
                     </li>
                 </ul>
                 <div class="btn btn-light d-flex signin-btn">
                     <img src="./img/gg_profile.png" alt="profile-icon" width="40px" height="40px">
                     <div class="d-flex flex-column btn-text-wrapper">
                         <?php
-                            $email = $_SESSION['user_email'];
+                        // $email = $_SESSION['user_email'];
 
-                            $query = "SELECT * FROM users WHERE email = '$userSession' ";
+                        $query = "SELECT * FROM users WHERE email = '$userSession' ";
 
-                            $runQuery = mysqli_query($conn, $query);
-                            
-                            $totalRowsData = mysqli_num_rows($runQuery);
-                            
-                            if ($totalRowsData == 1) {
-                                while ($row = mysqli_fetch_assoc($runQuery)) {
-                                    echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
-                                }
-                            } else {
-                                echo "<p>Hello err_user!</p>
-                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                        $runQuery = mysqli_query($conn, $query);
+
+                        $totalRowsData = mysqli_num_rows($runQuery);
+
+                        if ($totalRowsData == 1) {
+                            while ($row = mysqli_fetch_assoc($runQuery)) {
+                                echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
                             }
+                        } else {
+                            echo "<p>Hello err_user!</p>
+                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                        }
                         ?>
                         <!-- <p>Hello</p> -->
                         <p>Sign in or Sign up</p>
@@ -229,8 +230,8 @@ if (!$userSession) {
     </nav>
     <!-- navbar ended -->
 
-    
-    <section class="h-100 h-custom gradient-custom-2 register-section">
+
+    <section class="gradient-custom-2 register-section">
         <h4 class="d-flex justify-content-center w-full mb-2">Welcome to Glamourbud</h4>
         <h6 class="d-flex justify-content-center w-full">Please provide the necessary information for further processing of your associate application</h6>
 
@@ -405,6 +406,132 @@ if (!$userSession) {
             </div>
         </div>
     </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <!-- <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+                        </h6> -->
+                        <img src="./img/gb-logo.png" alt="glamourbud logo" width="150px" style="margin: 20px 0;">
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3 text-secondary"></i> Lachit Nagar, Guwahati 24, Assam</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 text-secondary"></i>
+                            support@glamourbud.com
+                        </p>
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Glamourbud.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
 
 
 

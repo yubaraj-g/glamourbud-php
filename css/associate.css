@@ -1,6 +1,7 @@
 @media (min-width: 1025px) {
     .h-custom {
-        height: 100vh !important;
+        /* height: 100vh !important; */
+        height: 30rem;
     }
 }
 
@@ -131,4 +132,8 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+}
+
+section {
+    height: fit-content;
 }

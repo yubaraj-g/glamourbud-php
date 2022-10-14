@@ -55,7 +55,7 @@ if (!$userSession) {
     die();
 
     echo "<script>console.log('session closed');</script>";
-} 
+}
 // else {
 //     header('location: ' . $homepage);
 //     die();
@@ -124,22 +124,22 @@ if (!$userSession) {
                     <img src="./img/gg_profile.png" alt="profile-icon" width="40px" height="40px">
                     <div class="d-flex flex-column btn-text-wrapper">
                         <?php
-                            $email = $_SESSION['user_email'];
+                        $email = $_SESSION['user_email'];
 
-                            $query = "SELECT * FROM users WHERE email = '$email' ";
+                        $query = "SELECT * FROM users WHERE email = '$email' ";
 
-                            $runQuery = mysqli_query($conn, $query);
-                            
-                            $totalRowsData = mysqli_num_rows($runQuery);
-                            
-                            if ($totalRowsData == 1) {
-                                while ($row = mysqli_fetch_assoc($runQuery)) {
-                                    echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
-                                }
-                            } else {
-                                echo "<p>Hello err_user!</p>
-                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                        $runQuery = mysqli_query($conn, $query);
+
+                        $totalRowsData = mysqli_num_rows($runQuery);
+
+                        if ($totalRowsData == 1) {
+                            while ($row = mysqli_fetch_assoc($runQuery)) {
+                                echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
                             }
+                        } else {
+                            echo "<p>Hello err_user!</p>
+                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                        }
                         ?>
                         <!-- <p>Hello</p> -->
                         <p>Sign in or Sign up</p>
@@ -551,7 +551,7 @@ if (!$userSession) {
 
                         </div>
                     </div>
-                    
+
                     <div class="carousel-item">
                         <div class="row px-5 gap">
                             <div class="col-lg px-0 card d-flex flex-col">
@@ -682,7 +682,7 @@ if (!$userSession) {
                         </div>
                     </div>
                 </div>
-                
+
                 <button class="c-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon prev-ico" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -1379,6 +1379,130 @@ if (!$userSession) {
     <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
         <button class="btn btn-primary" name="logout" type="submit">Logout</button>
     </form>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <!-- <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>Company name
+                        </h6> -->
+                        <img src="./img/gb-logo.png" alt="glamourbud logo" width="150px" style="margin: 20px 0;">
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3 text-secondary"></i> Lachit Nagar, Guwahati 24, Assam</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 text-secondary"></i>
+                            support@glamourbud.com
+                        </p>
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Glamourbud.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- if (isset($_POST['logout'])) {
         $sessionClose = session_destroy();
