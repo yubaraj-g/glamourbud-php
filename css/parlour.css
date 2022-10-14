@@ -1,0 +1,78 @@
+@media (min-width: 501px) {
+    .parlour {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* padding: 0 5rem; */
+    }
+
+    .div1 {
+        display: flex;
+        height: 40vh;
+        padding: 2rem 3rem;
+        background-color: aqua;
+        align-items: center;
+    }
+    .div1 .parlour-image {
+        width: 30%;
+        height: 80%;
+        background-color: cadetblue;
+    }
+    .div1 .title-details {
+        width: 40%;
+        height: 80%;
+        background-color: blueviolet;
+    }
+    .div1 .offer {
+        width: 30%;
+        height: 80%;
+        background-color: burlywood;
+    }
+
+    .div2 {
+        display: flex;
+        background-color: azure;
+    }
+    .div2 .categories {
+        width: 20%;
+    }
+    .div2 .services {
+        width: 50%;
+    }
+    .div2 .timeSlots {
+        width: 30%;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .parlour {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .div1 {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 3rem;
+        height: fit-content;
+        gap: 1rem;
+    }
+    .div1 .parlour-image {
+        height: 20vh;
+        width: 100%;
+        background-color: cadetblue;
+    }
+    .div1 .title-details {
+        height: 20vh;
+        width: 100%;
+        background-color: blueviolet;
+    }
+    .div1 .offer {
+        height: 20vh;
+        width: 100%;
+        background-color: burlywood;
+    }
+}

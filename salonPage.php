@@ -231,8 +231,28 @@ if (!$userSession) {
     </nav>
     <!-- navbar ended -->
 
+
     <!-- parlour section starts here -->
     <div class="parlour">
+        <div class="div1">
+            <div class="parlour-image"></div>
+            <div class="title-details"></div>
+            <div class="offer"></div>
+        </div>
+
+        <div class="div2">
+            <div class="categories"></div>
+            <div class="services"></div>
+            <div class="timeSlots">
+                <div class="available-slots"></div>
+                <div class="already-booked"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- map here  -->
+    <div class="map">
 
     </div>
 
