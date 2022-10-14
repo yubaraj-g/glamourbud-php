@@ -105,7 +105,7 @@ if (!$userSession) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold d-flex flex-grow-1 justify-content-center">
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
+                        <a class="nav-link disabled" aria-current="page" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="./about.php">About us</a>
@@ -134,7 +134,7 @@ if (!$userSession) {
                             
                             if ($totalRowsData == 1) {
                                 while ($row = mysqli_fetch_assoc($runQuery)) {
-                                    echo "<p>Hello" . " " . $row["first_name"] . "</p>";
+                                    echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
                                 }
                             } else {
                                 echo "<p>Hello err_user!</p>

@@ -1,3 +1,26 @@
+<?php
+include "./dbconn.php";
+$session = session_start();
+
+$loginPage = './login.php';
+$homepage = './index.php';
+
+$userSession = $_SESSION['user_email'];
+
+if (!$userSession) {
+    header('location: ' . $loginPage);
+    exit();
+} else if (isset($_POST['logout'])) {
+    $sessionClose = session_destroy();
+    $sessionClose;
+
+    header('location: ' . $loginPage);
+    die();
+
+    echo "<script>console.log('session closed');</script>";
+} 
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -54,7 +77,25 @@
                 <div class="btn btn-light d-flex signin-btn">
                     <img src="./img/gg_profile.png" alt="profile-icon" width="40px" height="40px">
                     <div class="d-flex flex-column btn-text-wrapper">
-                        <p>Hello</p>
+                        <?php
+                            $email = $_SESSION['user_email'];
+
+                            $query = "SELECT * FROM users WHERE email = '$userSession' ";
+
+                            $runQuery = mysqli_query($conn, $query);
+                            
+                            $totalRowsData = mysqli_num_rows($runQuery);
+                            
+                            if ($totalRowsData == 1) {
+                                while ($row = mysqli_fetch_assoc($runQuery)) {
+                                    echo "<p>Hello <i>" . $row["first_name"] . "</i></p>";
+                                }
+                            } else {
+                                echo "<p>Hello err_user!</p>
+                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                            }
+                        ?>
+                        <!-- <p>Hello</p> -->
                         <p>Sign in or Sign up</p>
                     </div>
                 </div>
