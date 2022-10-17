@@ -94,7 +94,7 @@ if (!$userSession) {
                             }
                         } else {
                             echo "<p>Hello err_user!</p>
-                                <script>console.log('error in users database. Please check database for repeated emails.')</script>";
+                                <script>console.log('error in users database. Please check database for repeated email ids.')</script>";
                         }
                         ?>
                         <!-- <p>Hello</p> -->
@@ -235,9 +235,34 @@ if (!$userSession) {
     <!-- parlour section starts here -->
     <div class="parlour">
         <div class="div1">
-            <div class="parlour-image"></div>
-            <div class="title-details"></div>
-            <div class="offer"></div>
+            <div class="parlour-image">
+                <img src="./img/saloninterior.jpg" alt="salon interior" class="p-img" width="">
+            </div>
+            <div class="title-details">
+                <h2>DAVID's BEAUTY & SPA</h2>
+                <div class="d-flex">
+                    <img src="./img/star-fill.png" alt="">
+                    <img src="./img/star-fill.png" alt="">
+                    <img src="./img/star-fill.png" alt="">
+                    <img src="./img/star-fill.png" alt="">
+                    <img src="./img/star-fill.png" alt="">
+                </div>
+            </div>
+            <div class="offer">
+                <div class="offer-text mb-2">
+                    <h5>OFFER</h5>
+                    <h4>20% off on festive days</h4>
+                    <a href="">Click for more details</a>
+                </div>
+                <div class="fav-button">
+                    <button type="button" class="btn btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                        </svg>
+                        Favourite
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="div2">
