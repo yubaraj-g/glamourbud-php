@@ -19,15 +19,16 @@
         display: flex;
         width: 30%;
         max-width: 420px;
-        /* height: 80%; */
+        height: 80%;
         background-color: cadetblue;
-        object-fit: contain;
+        /* object-fit: cover; */
     }
     .div1 .parlour-image .p-img {
         min-width: 300px;
         max-width: 420px;
-        width: inherit;
-        /* object-fit: cover; */
+        width:fit-content;
+        object-fit: cover;
+        overflow: hidden;
     }
     .div1 .title-details {
         width: 40%;
