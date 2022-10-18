@@ -239,13 +239,35 @@ if (!$userSession) {
                 <img src="./img/saloninterior.jpg" alt="salon interior" class="p-img" width="">
             </div>
             <div class="title-details">
-                <h2>DAVID's BEAUTY & SPA</h2>
-                <div class="d-flex">
-                    <img src="./img/star-fill.png" alt="">
-                    <img src="./img/star-fill.png" alt="">
-                    <img src="./img/star-fill.png" alt="">
-                    <img src="./img/star-fill.png" alt="">
-                    <img src="./img/star-fill.png" alt="">
+                <div class="parlour-title d-flex">
+                    <h2>DAVID's BEAUTY & SPA</h2>
+                    <p>unisex</p>
+                </div>
+                <div class="stars-rating">
+                    <p>Rating</p>
+                    <div class="d-flex">
+                        <img src="./img/star-fill.png" alt="">
+                        <img src="./img/star-fill.png" alt="">
+                        <img src="./img/star-fill.png" alt="">
+                        <img src="./img/star-fill.png" alt="">
+                        <img src="./img/star-fill.png" alt="">
+                    </div>
+                </div>
+
+                <div class="select-gender">
+                    <div class="form-check btn btn-primary">
+                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        <label class="" for="btn-check">Male</label>
+                    </div>
+                    <div class="form-check btn btn-primary">
+                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        <label class="" for="btn-check">Female</label>
+                    </div>
+                    <div class="form-check btn btn-primary">
+                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                        <label class="" for="btn-check">Others</label>
+                    </div>
+                    
                 </div>
             </div>
             <div class="offer">

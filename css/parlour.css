@@ -11,9 +11,9 @@
         display: flex;
         height: fit-content;
         padding: 2rem 3rem;
-        background-color: aqua;
+        /* background-color: aqua; */
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
     .div1 .parlour-image {
         display: flex;
@@ -33,14 +33,41 @@
     .div1 .title-details {
         width: 40%;
         height: 80%;
-        background-color: blueviolet;
-        padding: 0.75rem;
+        /* padding: 0.75rem; */
+    }
+    .title-details .parlour-title {
+        align-items: start;
+        gap: 2rem;
+    }
+    .title-details .parlour-title h2 {
+        font-weight: 700;
+    }
+    .title-details .parlour-title p{
+        background-color: #06283D;
+        padding: 0.15rem 0.5rem;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .title-details .stars-rating {
+        margin-top: 0.5rem;
+        background-color: #47B5FF61;
+        border-radius: 5px;
+        padding: 0.75rem 0.75rem 1rem 0.75rem;
+    }
+    .title-details .stars-rating p{
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+        font-weight: 500;
     }
     .div1 .offer {
         width: 30%;
         height: 80%;
         background-color: burlywood;
         padding: 0.75rem;
+        border-radius: 5px;
+        color: white;
     }
 
     .div2 {
@@ -55,6 +82,10 @@
     }
     .div2 .timeSlots {
         width: 30%;
+    }
+
+    .select-gender {
+        margin-top: 1.5rem;
     }
 }
 
@@ -96,6 +127,33 @@
         color: black;
         padding: 0;
         font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-details .parlour-title {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0.25rem;
+    }
+    .title-details .parlour-title h2 {
+        font-weight: 700;
+    }
+    .title-details .parlour-title p{
+        background-color: #06283D;
+        padding: 0.15rem 0.5rem;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-weight: 500;
+    }
+    .stars-rating {
+        justify-content: center;
+    }
+    .stars-rating p {
+        padding: 0;
+        margin: 0;
     }
     .div1 .offer {
         display: flex;
@@ -117,5 +175,13 @@
     .offer .fav-button {
         display: flex;
         justify-content: center;
+    }
+
+    .select-gender {
+        display: flex;
+        padding: 0;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
