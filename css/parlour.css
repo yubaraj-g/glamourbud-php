@@ -73,19 +73,122 @@
     .div2 {
         display: flex;
         background-color: azure;
+        gap: 2rem;
+        margin: 0 3rem 0 3rem;
     }
     .div2 .categories {
         width: 20%;
+        height: fit-content;
+        justify-content: flex-end;
+        /* background-color: cadetblue; */
+    }
+    .div2 .categories h2 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .div2 .categories ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }.div2 .categories ul li {
+        display: flex;
+        padding: 0.75rem;
+        background-color: violet;
+        justify-content: flex-end;
+        color: white;
+        border-radius: 5px;
     }
     .div2 .services {
-        width: 50%;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: fit-content;
+        gap: 0.25rem;
+        /* background-color: thistle; */
     }
+    .services h2 {
+        display: flex;
+        justify-content: center;
+    }
+    .services .service-item {
+        background-color: #47B5FF61;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+    }
+
     .div2 .timeSlots {
-        width: 30%;
+        width: 20%;
+        height: fit-content;
+        /* background-color: wheat; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .timeSlots .available-slots {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+    .timeSlots .available-slots h3 {
+        font-weight: 600;
+        color: black;
+        display: flex;
+        justify-content: center;
+    }
+    .timeSlots .available-slots div {
+        background-color: slateblue;
+        color: white;
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    .timeSlots .already-booked {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+    .timeSlots .already-booked h3 {
+        color: black;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+    }
+    .timeSlots .already-booked div {
+        background: #47B5FF61;
+        color: blue;
+        padding: 0.5rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
     }
 
     .select-gender {
         margin-top: 1.5rem;
+    }
+
+    .map {
+        display: flex;
+        margin-top: 2rem;
+        width: 100%;
+        height: 50vh;
+        background-color: cadetblue;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+    .map h3 {
+        display: flex;
+        /* justify-content: center; */
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
     }
 }
 

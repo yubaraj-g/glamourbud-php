@@ -288,11 +288,71 @@ if (!$userSession) {
         </div>
 
         <div class="div2">
-            <div class="categories"></div>
-            <div class="services"></div>
+            <div class="categories">
+                <h2>Categories</h2>
+                <ul>
+                    <li>Category 1</li>
+                    <li>Category 2</li>
+                    <li>Category 3</li>
+                    <li>Category 4</li>
+                    <li>Category 5</li>
+                    <li>Category 6</li>
+                    <li>Category 7</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+                <div class="service-item">
+                    <h3>Service 1</h3>
+                    <button class="btn btn-primary">add</button>
+                </div>
+            </div>
             <div class="timeSlots">
-                <div class="available-slots"></div>
-                <div class="already-booked"></div>
+                <div class="available-slots">
+                    <h3 class="mb-2">Available Slots</h3>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                </div>
+                <div class="already-booked">
+                    <h3 class="mb-2">Already Booked</h3>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am</div>
+                </div>
             </div>
         </div>
     </div>
@@ -300,7 +360,7 @@ if (!$userSession) {
 
     <!-- map here  -->
     <div class="map">
-
+        <h3>MAP</h3>
     </div>
 
 
