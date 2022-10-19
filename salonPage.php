@@ -358,8 +358,17 @@ if (!$userSession) {
     </div>
 
 
-    <div class="selected-services">
-        
+    <div class="booked-services">
+        <div class="wrapper">
+            <h5>Booked Services</h5>
+            <hr />
+            <div class="the-service">
+                <h3>SERVICE 1</h3>
+                <h3>11:30am - 12:00pm</h3>
+                <h3>899 $</h3>
+                <button class="btn btn-warning">Confirm ?</button>
+            </div>
+        </div>
     </div>
 
 
