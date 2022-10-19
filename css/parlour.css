@@ -112,7 +112,7 @@
     }
     .services .service-item {
         background-color: #47B5FF61;
-        padding: 1.5rem;
+        padding: 1rem;
         display: flex;
         justify-content: space-between;
         border-radius: 5px;
@@ -121,7 +121,6 @@
     .div2 .timeSlots {
         width: 20%;
         height: fit-content;
-        /* background-color: wheat; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -146,7 +145,8 @@
         width: 100%;
         border-radius: 5px;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .timeSlots .already-booked {
         display: flex;
@@ -286,5 +286,87 @@
         margin-top: 1.5rem;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .div2 {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 3rem;
+        margin: 0;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .div2 .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .div2 .categories h2 {
+        display: flex;
+        justify-content: center;
+    }
+    .div2 .categories ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 0.5rem;
+    }
+    .div2 .categories ul li {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: center;
+        width: 100%;
+        padding: 0.75rem;
+        background-color: violet;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .div2 .services {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .div2 .services h2 {
+        display: flex;
+        justify-content: center;
+    }
+    .div2 .services .service-item {
+        display: flex;
+        background-color: #47B5FF61;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .div2 .timeSlots {
+        display: flex;
+        flex-direction: column;
+    }
+    .div2 .timeSlots h3 {
+        display: flex;
+        justify-content: center;
+    }
+    .timeSlots .available-slots {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .timeSlots .available-slots div {
+        background-color: slateblue;
+        color: white;
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 }

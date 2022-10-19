@@ -338,13 +338,13 @@ if (!$userSession) {
             <div class="timeSlots">
                 <div class="available-slots">
                     <h3 class="mb-2">Available Slots</h3>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
-                    <div>11:00am - 11:30am</div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
                 </div>
                 <div class="already-booked">
                     <h3 class="mb-2">Already Booked</h3>
@@ -355,6 +355,11 @@ if (!$userSession) {
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="selected-services">
+        
     </div>
 
 
