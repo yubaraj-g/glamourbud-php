@@ -43,6 +43,8 @@ if (!$userSession) {
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+
+    <script src="./js/booking.js"></script>
 </head>
 
 <body class="w-full">
@@ -250,7 +252,7 @@ if (!$userSession) {
                         <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
                         <label class="" for="btn-check">Others</label>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="offer">
@@ -274,15 +276,33 @@ if (!$userSession) {
             <div class="categories">
                 <h2>Categories</h2>
                 <ul>
-                    <li class="bg-dark text-light" id="haircare" onClick="haircare"  value="Hair Care"><a href="">Hair Care</a></li>
-                    <li class="bg-light text-dark" id="facials" onClick="facials" value="Facial Treatments"><a href="">Facial Treatments</a></li>
-                    <li class="bg-light text-dark" id="advFacials" onClick="advFacials" value="Advanced Facial Treatments"><a href="">Advanced Facial Treatments</a></li>
-                    <li class="bg-light text-dark" id="antiAging" onClick="antiAging" value="Anti Ageing Treatments"><a href="">Anti Ageing Treatments</a></li>
-                    <li class="bg-light text-dark" id="eyeTreatment" onClick="eyeTreatment" value="Eye Treatment Center"><a href="">Eye Treatment Center</a></li>
-                    <li class="bg-light text-dark" id="bodyMsg" onClick="bodyMsg" value="Body Massage"><a href="">Body Massage</a></li>
-                    <li class="bg-light text-dark" id="makeups" onClick="makeups" value="Makeup Services"><a href="">Makeup Services</a></li>
-                    <li class="bg-light text-dark" id="waxing" onClick="waxing" value="Waxing"><a href="">Waxing</a></li>
-                    <li class="bg-light text-dark" id="nailcare" onClick="nailcare" value="Nail Care"><a href="">Nail Care</a></li>
+                    <li class="btn-light" id="haircare" onClick="haircare()" value="Hair Care">
+                        Hair Care
+                    </li>
+                    <li class="btn-light" id="facials" onClick="facials()" value="Facial Treatments">
+                        Facial Treatments
+                    </li>
+                    <li class="btn-light" id="advFacials" onClick="advFacials()" value="Advanced Facial Treatments">
+                        Advanced Facial Treatments
+                    </li>
+                    <li class="btn-light" id="antiAging" onClick="antiAging()" value="Anti Ageing Treatments">
+                        Anti Ageing Treatments
+                    </li>
+                    <li class="btn-light" id="eyeTreatment" onClick="eyeTreatment()" value="Eye Treatment Center">
+                        Eye Treatment Center
+                    </li>
+                    <li class="btn-light" id="bodyMsg" onClick="bodyMsg()" value="Body Massage">
+                        Body Massage
+                    </li>
+                    <li class="btn-light" id="makeups" onClick="makeups()" value="Makeup Services">
+                        Makeup Services
+                    </li>
+                    <li class="btn-light" id="waxing" onClick="waxing()" value="Waxing">
+                        Waxing
+                    </li>
+                    <li class="btn-light" id="nailcare" onClick="nailcare()" value="Nail Care">
+                        Nail Care
+                    </li>
                 </ul>
             </div>
             <div class="services">
@@ -356,7 +376,7 @@ if (!$userSession) {
         </div>
     </div>
 
-    
+
     <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
         <button class="btn btn-primary" name="logout" type="submit">Logout</button>
     </form>
@@ -495,7 +515,7 @@ if (!$userSession) {
     <!-- Footer -->
 
 
-    <script src="./js/booking.js"></script>
+    <!-- <script src="./js/booking.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 

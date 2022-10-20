@@ -88,21 +88,31 @@
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
-    }.div2 .categories ul li {
+    }
+    .div2 .categories ul li {
         display: flex;
         padding: 0.75rem;
-        background-color: violet;
+        justify-content: flex-end;
+        border-radius: 5px;
+        font-size: 12px;
+        color: #3b71ca;
+    }
+    .div2 .categories ul .selectedCatgry {
+        display: flex;
         justify-content: flex-end;
         color: white;
+        /* border-bottom: 1px solid #3b71ca; */
+        background-color: #3b71ca;
         border-radius: 5px;
+        padding: 0.75rem;
     }
+
     .div2 .services {
         display: flex;
         flex-direction: column;
         width: 60%;
         height: fit-content;
         gap: 0.25rem;
-        /* background-color: thistle; */
     }
     .services h2 {
         display: flex;
@@ -183,7 +193,6 @@
     }
     .map h3 {
         display: flex;
-        /* justify-content: center; */
         color: white;
         font-size: 32px;
         font-weight: 700;
@@ -412,11 +421,6 @@
         justify-content: center;
         border-radius: 5px;
     }
-    /* .timeSlots .already-booked div span {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-    } */
 
     .booked-services {
         padding: 2rem 3rem;
@@ -463,3 +467,8 @@
         font-weight: 700;
     }
 }
+
+/* .btn-light {
+    color: #3b71ca;
+} */
+
