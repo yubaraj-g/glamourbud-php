@@ -109,26 +109,9 @@ if (!$userSession) {
     <nav class="nav2 navbar-dark navbar-expand-lg bg-dark w-full">
         <div class="container-fluid w-full">
 
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-
             <div class="d-flex collapse navbar-collapse px-4 py-2 gap-3 align-center" id="navbarSupportedContent">
                 <ul class="d-flex align-center navbar-nav mb-lg-0 d-flex flex-grow-1 justify-content-between fw-normal margin-r-5">
 
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select your location
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ganeshguri</a></li>
-                            <li><a class="dropdown-item" href="#">Dispur</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Show all</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item dropdown dropdown-toggle" style="width: 17%">
                         <select class="nav-link dropdown-menu form-select bg-dark text-light" aria-label="Default select example" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <option selected class="bg-light nav-link text-dark">Select your location</option>
@@ -291,7 +274,15 @@ if (!$userSession) {
             <div class="categories">
                 <h2>Categories</h2>
                 <ul>
-                    <li><a href=""></a></li>
+                    <li class="bg-dark text-light" id="haircare" onClick="haircare"  value="Hair Care"><a href="">Hair Care</a></li>
+                    <li class="bg-light text-dark" id="facials" onClick="facials" value="Facial Treatments"><a href="">Facial Treatments</a></li>
+                    <li class="bg-light text-dark" id="advFacials" onClick="advFacials" value="Advanced Facial Treatments"><a href="">Advanced Facial Treatments</a></li>
+                    <li class="bg-light text-dark" id="antiAging" onClick="antiAging" value="Anti Ageing Treatments"><a href="">Anti Ageing Treatments</a></li>
+                    <li class="bg-light text-dark" id="eyeTreatment" onClick="eyeTreatment" value="Eye Treatment Center"><a href="">Eye Treatment Center</a></li>
+                    <li class="bg-light text-dark" id="bodyMsg" onClick="bodyMsg" value="Body Massage"><a href="">Body Massage</a></li>
+                    <li class="bg-light text-dark" id="makeups" onClick="makeups" value="Makeup Services"><a href="">Makeup Services</a></li>
+                    <li class="bg-light text-dark" id="waxing" onClick="waxing" value="Waxing"><a href="">Waxing</a></li>
+                    <li class="bg-light text-dark" id="nailcare" onClick="nailcare" value="Nail Care"><a href="">Nail Care</a></li>
                 </ul>
             </div>
             <div class="services">
