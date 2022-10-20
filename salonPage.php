@@ -291,13 +291,7 @@ if (!$userSession) {
             <div class="categories">
                 <h2>Categories</h2>
                 <ul>
-                    <li>Category 1</li>
-                    <li>Category 2</li>
-                    <li>Category 3</li>
-                    <li>Category 4</li>
-                    <li>Category 5</li>
-                    <li>Category 6</li>
-                    <li>Category 7</li>
+                    <li><a href=""></a></li>
                 </ul>
             </div>
             <div class="services">
@@ -364,12 +358,17 @@ if (!$userSession) {
             <hr />
             <div class="the-service">
                 <h3>SERVICE 1</h3>
-                <h3>11:30am - 12:00pm</h3>
+                <h4>11:30am - 12:00pm</h4>
                 <h3>899 $</h3>
                 <button class="btn btn-warning">Confirm ?</button>
             </div>
         </div>
     </div>
+
+    
+    <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
+        <button class="btn btn-primary" name="logout" type="submit">Logout</button>
+    </form>
 
 
     <!-- map here  -->
@@ -505,7 +504,7 @@ if (!$userSession) {
     <!-- Footer -->
 
 
-
+    <script src="./js/booking.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 

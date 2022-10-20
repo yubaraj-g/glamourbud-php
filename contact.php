@@ -237,6 +237,10 @@ if (!$userSession) {
     </div>
 
 
+    
+    <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
+        <button class="btn btn-primary" name="logout" type="submit">Logout</button>
+    </form>
 
 
     <!-- Footer -->
