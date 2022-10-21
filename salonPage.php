@@ -305,51 +305,71 @@ if (!$userSession) {
                     </li>
                 </ul>
             </div>
-            <div class="services">
+            <div class="services" id="services">
                 <h2>Services</h2>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service1">Haircut Men</h6>
+                    <p class="price">26$</p>
+                    <button class="btn btn-primary" onclick="addS1()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service2">Haircut Women (above shoulders)</h6>
+                    <p class="price">28$</p>
+                    <button class="btn btn-primary" onclick="addS2()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service3">Haircut Women (below shoulders)</h6>
+                    <p class="price">35$</p>
+                    <button class="btn btn-primary" onclick="addS3()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service4">Highlights & Color (Full)</h6>
+                    <p class="price">130$</p>
+                    <button class="btn btn-primary" onclick="addS4()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service5">Permanent Color</h6>
+                    <p class="price">99$</p>
+                    <button class="btn btn-primary" onclick="addS5()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service6">Full Perm</h6>
+                    <p class="price">99$</p>
+                    <button class="btn btn-primary" onclick="addS6()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service7">Acid Repair Perm</h6>
+                    <p class="price">129$</p>
+                    <button class="btn btn-primary" onclick="addS7()">add</button>
                 </div>
                 <div class="service-item">
-                    <h3>Service 1</h3>
-                    <button class="btn btn-primary">add</button>
+                    <h6 id="service8">Japanese Straightning Perm</h6>
+                    <p class="price">290$</p>
+                    <button class="btn btn-primary" onclick="addS8()">add</button>
                 </div>
             </div>
+
+
+            <!-- just a dummy test js code -->
+
+            <!-- <script>
+                let code = '<h2>who are you</h2>';
+
+                document.getElementById("services").innerHTML = code;
+            </script> -->
+
+
+
             <div class="timeSlots">
                 <div class="available-slots">
                     <h3 class="mb-2">Available Slots</h3>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
-                    <div>11:00am - 11:30am <button class="btn btn-light">+</button></div>
+                    <div>11:00am - 11:30am <button class="btn btn-light" onclick="addTime1()">+</button></div>
+                    <div>11:30am - 12:00am <button class="btn btn-light" onclick="addTime2()">+</button></div>
+                    <div>12:00am - 12:30am <button class="btn btn-light" onclick="addTime3()">+</button></div>
+                    <div>12:30am - 01:00am <button class="btn btn-light" onclick="addTime4()">+</button></div>
+                    <div>01:00am - 01:30am <button class="btn btn-light" onclick="addTime5()">+</button></div>
+                    <div>01:30am - 02:00am <button class="btn btn-light" onclick="addTime6()">+</button></div>
+                    <div>02:00am - 02:30am <button class="btn btn-light" onclick="addTime7()">+</button></div>
                 </div>
                 <div class="already-booked">
                     <h3 class="mb-2">Already Booked</h3>
@@ -364,16 +384,22 @@ if (!$userSession) {
 
 
     <div class="booked-services">
-        <div class="wrapper">
+        <form class="wrapper" action="bookingSubmit.php" method="post">
             <h5>Booked Services</h5>
             <hr />
-            <div class="the-service">
-                <h3>SERVICE 1</h3>
-                <h4>11:30am - 12:00pm</h4>
-                <h3>899 $</h3>
-                <button class="btn btn-warning">Confirm ?</button>
+            <div class="the-service" id="theBookedService">
+                <h3 id="servicename"></h3>
+                <h4 id="timeperiod"></h4>
+                <h3>
+                    <span id="price"></span> $
+                </h3>
+                <input type="hidden" name="servicename" id="h_servicename">
+                <input type="hidden" name="timeperiod" id="h_timeperiod">
+                <input type="hidden" name="price" id="h_price">
+                <button class="btn btn-warning" type="submit" name="confirm">Confirm ?</button>
             </div>
-        </div>
+        </form>
+                
     </div>
 
 

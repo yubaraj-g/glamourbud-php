@@ -124,6 +124,14 @@
         display: flex;
         justify-content: space-between;
         border-radius: 5px;
+        align-items: center;
+        margin: auto 0;
+    }
+    .services .service-item h6, .price {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        margin: auto 0;
     }
 
     .div2 .timeSlots {

@@ -360,25 +360,6 @@ if (!$userSession) {
                                             </div>
                                         </div>
 
-                                        <!-- <div class="row">
-                                            <div class="col-md-5 mb-4 pb-2">
-
-                                                <div class="form-outline form-white">
-                                                    <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea7">PIN CODE</label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-7 mb-4 pb-2">
-
-                                                <div class="form-outline form-white">
-                                                    <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Examplea8">Phone Number</label>
-                                                </div>
-
-                                            </div>
-                                        </div> -->
-
                                         <div class="mb-4">
                                             <div class="form-outline form-white">
                                                 <input type="text" id="form3Examplea9" class="form-control form-control-lg" />
