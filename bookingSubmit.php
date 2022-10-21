@@ -42,12 +42,8 @@ if(!$conn) {
 } else {
     
     if(isset($_POST['confirm'])) {
-        // $sql = " INSERT INTO `bookings` (`usermail`, `servicename`, `timeslots`, `price`) VALUES ($usermail, $servicename, $timeperiod, $price) ";
-
-        // $sql = mysqli_query($conn, "INSERT INTO bookings SET usermail = '$usermail', servicename = '$servicename', timeslots = '$timeperiod', price = '$price'");
+        
         $sql = mysqli_query($conn, " INSERT INTO `bookings` (`usermail`, `servicename`, `timeslots`, `price`) VALUES ('$usermail', '$servicename', '$timeperiod', '$price') ");
-
-        // $run_insert_query = mysqli_query($conn, $sql);
 
         echo $modal;
     }

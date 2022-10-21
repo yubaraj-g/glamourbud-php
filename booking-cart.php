@@ -242,14 +242,14 @@ if (!$userSession) {
                                     <div class="p-5">
                                         <div class="d-flex justify-content-between align-items-center mb-5">
                                             <h1 class="fw-bold mb-0 text-black">Your Bookings</h1>
-                                            <h6 class="mb-0 text-muted">3 items</h6>
+                                            <!-- <h6 class="mb-0 text-muted">3 items</h6> -->
                                         </div>
                                         <hr class="my-4">
 
                                         <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                            <div class="col-md-2 col-lg-2 col-xl-2">
+                                            <!-- <div class="col-md-2 col-lg-2 col-xl-2">
                                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp" class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                            </div>
+                                            </div> -->
                                             <div class="col-md-3 col-lg-3 col-xl-3">
                                                 <h6 class="text-muted">Shirt</h6>
                                                 <h6 class="text-black mb-0">Cotton T-shirt</h6>
@@ -263,9 +263,9 @@ if (!$userSession) {
                                             </div>
                                         </div>
 
-                                        <hr class="my-4">
+                                        <!-- <hr class="my-4"> -->
 
-                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                        <!-- <div class="row mb-4 d-flex justify-content-between align-items-center">
                                             <div class="col-md-2 col-lg-2 col-xl-2">
                                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp" class="img-fluid rounded-3" alt="Cotton T-shirt">
                                             </div>
@@ -299,7 +299,7 @@ if (!$userSession) {
                                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                                 <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <hr class="my-4">
 
@@ -323,9 +323,9 @@ if (!$userSession) {
                                         <div class="mb-4 pb-2">
                                             <select class="select">
                                                 <option value="1">Standard-Delivery- €5.00</option>
-                                                <option value="2">Two</option>
+                                                <!-- <option value="2">Two</option>
                                                 <option value="3">Three</option>
-                                                <option value="4">Four</option>
+                                                <option value="4">Four</option> -->
                                             </select>
                                         </div>
 
@@ -356,6 +356,10 @@ if (!$userSession) {
             </div>
         </div>
     </section>
+
+    <form action="#" method="POST" class="d-flex w-100 justify-content-center mt-5">
+        <button class="btn btn-primary" name="logout" type="submit">Logout</button>
+    </form>
 
 
     <!-- Footer -->
