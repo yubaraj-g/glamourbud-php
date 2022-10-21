@@ -131,25 +131,25 @@ if (!$userSession) {
                     <li class="nav-item dropdown dropdown-toggle" style="width: 17%">
                         <select class="nav-link dropdown-menu form-select bg-dark text-light" aria-label="Default select example" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <option selected class="bg-light nav-link text-dark">Select your location</option>
-                            <option value="1" class="bg-light text-dark">Azara</option>
-                            <option value="2" class="bg-light text-dark">Bamunimaidan</option>
-                            <option value="3" class="bg-light text-dark">Basistha</option>
-                            <option value="4" class="bg-light text-dark">Beharbari</option>
-                            <option value="5" class="bg-light text-dark">Beltola</option>
-                            <option value="6" class="bg-light text-dark">Bhangagarh</option>
-                            <option value="6" class="bg-light text-dark">Bharalumukh</option>
-                            <option value="6" class="bg-light text-dark">Bhetapara</option>
-                            <option value="6" class="bg-light text-dark">Borbari</option>
-                            <option value="6" class="bg-light text-dark">Borjhar</option>
-                            <option value="6" class="bg-light text-dark">Chandmari</option>
-                            <option value="6" class="bg-light text-dark">Christianbasti</option>
-                            <option value="6" class="bg-light text-dark">Dispur</option>
-                            <option value="6" class="bg-light text-dark">Ganeshguri</option>
-                            <option value="6" class="bg-light text-dark">Geetanagar</option>
-                            <option value="6" class="bg-light text-dark">GS Road</option>
-                            <option value="6" class="bg-light text-dark">Hatigaon</option>
-                            <option value="6" class="bg-light text-dark">Hengerabari</option>
-                            <option value="6" class="bg-light text-dark">Jalukbari</option>
+                            <option value="Azara" class="bg-light text-dark">Azara</option>
+                            <option value="Bamunimaidan" class="bg-light text-dark">Bamunimaidan</option>
+                            <option value="Basistha" class="bg-light text-dark">Basistha</option>
+                            <option value="Beharbari" class="bg-light text-dark">Beharbari</option>
+                            <option value="Beltola" class="bg-light text-dark">Beltola</option>
+                            <option value="Bhangagarh" class="bg-light text-dark">Bhangagarh</option>
+                            <option value="Bharalumukh" class="bg-light text-dark">Bharalumukh</option>
+                            <option value="Bhetapara" class="bg-light text-dark">Bhetapara</option>
+                            <option value="Borbari" class="bg-light text-dark">Borbari</option>
+                            <option value="Borjhar" class="bg-light text-dark">Borjhar</option>
+                            <option value="Chandmari" class="bg-light text-dark">Chandmari</option>
+                            <option value="Christianbasti" class="bg-light text-dark">Christianbasti</option>
+                            <option value="Dispur" class="bg-light text-dark">Dispur</option>
+                            <option value="Ganeshguri" class="bg-light text-dark">Ganeshguri</option>
+                            <option value="Geetanagar" class="bg-light text-dark">Geetanagar</option>
+                            <option value="GS Road" class="bg-light text-dark">GS Road</option>
+                            <option value="Hatigaon" class="bg-light text-dark">Hatigaon</option>
+                            <option value="Hengerabari" class="bg-light text-dark">Hengerabari</option>
+                            <option value="Jalukbari" class="bg-light text-dark">Jalukbari</option>
                         </select>
                     </li>
                     <li class="nav-item dropdown">
