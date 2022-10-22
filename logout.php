@@ -61,11 +61,11 @@ if(!$userSession) {
     </form>
 
     <?php
+        $sessionUnset = session_unset();
         $sessionClose = session_destroy();
 
-        
-
         if(isset($_POST['logout'])) {
+            $sessionUnset;
             $sessionClose;
 
             header('location: ' . $loginPage);

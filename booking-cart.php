@@ -246,62 +246,87 @@ if (!$userSession) {
                                         </div>
                                         <hr class="my-4">
 
-                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                            <!-- <div class="col-md-2 col-lg-2 col-xl-2">
-                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp" class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                            </div> -->
-                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                <h6 class="text-muted">Shirt</h6>
-                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
+                                        <?php
+
+                                        $sql = " SELECT * FROM bookings WHERE usermail = '$userSession' ";
+                                        // $price1 = " SELECT `price` FROM bookings WHERE usermail = '$userSession' ";
+
+                                        $runSql = mysqli_query($conn, $sql);
+
+                                        $sqlDel1 = " DELETE FROM `bookings` WHERE `servicename` = 'Haircut Men' ";
+                                        // $runSqlDel = mysqli_query($conn, $sqlDel1);
+
+
+                                        if (mysqli_num_rows($runSql) == 0) {
+                                            //din not purchased any. Okay ogot it good
+                                        ?>
+                                            <div class="alert alert-info" role="alert">
+                                                You haven't booked any service yet!
                                             </div>
+
+                                        <?php
+                                        }
+
+                                        // $conn = mysqli_connect($server, $username, $password, $dbname);
+
+                                        while ($results = mysqli_fetch_array($runSql)) {
+
+                                            function removeitem()
+                                            {
+                                                
+                                                if ($results['servicename'] = "Haircut Men") {
+                                                    $server = "localhost";
+                                                    $username = "root";
+                                                    $password = "";
+                                                    $dbname = "gb_01";
+                                                    $usermail = $_SESSION['user_email'];
+                                                    
+                                                    $db = new PDO("mysql:host=$server;dbname=$dbname", $username, $password);
+                                                    $delRow = $db->prepare(" DELETE FROM `bookings` WHERE `servicename` = 'Haircut Men' && `usermail` = '$usermail' ");
+                                                    $delRow->execute();
+
+                                                    // $refreshPage = './booking-cart.php';
+                                                    // header('Location: ' . $refreshPage);
+                                                    ?>
+                                                    <meta http-equiv="refresh" content="0; url = http://localhost/gb-php/booking-cart.php" />
+                                                    <?php
+                                                }
+                                            }
+                                            // if (array_key_exists('removeitem', $_POST)) {
+                                            //     removeitem();
+                                            // }
+
+                                            if(isset($_POST['removeitem'])) {
+                                                removeitem();
+                                            }
+
                                             
-                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                <h6 class="mb-0">€ 44.00</h6>
-                                            </div>
-                                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                            </div>
-                                        </div>
+                                        ?>
+                                            <form method="post" class="row mb-4 d-flex justify-content-between align-items-center">
+                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                    <h6 class="text-black"><?php echo $results['servicename']; ?></h6>
+                                                    <h6 class="text-muted mb-0"><?php echo $results['timeslots']; ?></h6>
+                                                </div>
 
-                                        <!-- <hr class="my-4"> -->
+                                                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                                    <h6 class="mb-0">$ <?php 
+                                                    echo $results['price'];
+                                                    $price1 = $results['price'];
+                                                    ?></h6>
+                                                </div>
+                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                    <button class="btn btn-ouline-dark" name="removeitem" type="submit">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            <hr class="my-4">
+                                        <?php
+                                        }
 
-                                        <!-- <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp" class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                            </div>
-                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                <h6 class="text-muted">Shirt</h6>
-                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
-                                            </div>
-                                            
-                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                <h6 class="mb-0">€ 44.00</h6>
-                                            </div>
-                                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                            </div>
-                                        </div>
+                                        // $price1 = $_SESSION['price'];
 
-                                        <hr class="my-4">
-
-                                        <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img7.webp" class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                            </div>
-                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                <h6 class="text-muted">Shirt</h6>
-                                                <h6 class="text-black mb-0">Cotton T-shirt</h6>
-                                            </div>
-                                            
-                                            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                <h6 class="mb-0">€ 44.00</h6>
-                                            </div>
-                                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                            </div>
-                                        </div> -->
-
-                                        <hr class="my-4">
+                                        ?>
 
                                         <div class="pt-5">
                                             <h6 class="mb-0"><a href="./index.php" class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
@@ -314,15 +339,26 @@ if (!$userSession) {
                                         <hr class="my-4">
 
                                         <div class="d-flex justify-content-between mb-4">
-                                            <h5 class="text-uppercase">items 3</h5>
-                                            <h5>€ 132.00</h5>
+                                            <h5 class="text-uppercase">items 1</h5>
+                                            <h5>$ 
+                                                <script>
+                                                    let price1 = '<?php echo $price1; ?>';
+                                                    let price2 = parseInt(price1);
+                                                    if(price2 == 0 || price2 == null || price1 == '' || price2 == '') {
+                                                        document.write("0");
+                                                    } else {
+                                                        document.write(price2);
+                                                    }
+                                                </script>
+                                                
+                                            </h5>
                                         </div>
 
                                         <h5 class="text-uppercase mb-3">Shipping</h5>
 
                                         <div class="mb-4 pb-2">
                                             <select class="select">
-                                                <option value="1">Standard-Delivery- €5.00</option>
+                                                <option value="1">Standard-Delivery- $5.00</option>
                                                 <!-- <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                                 <option value="4">Four</option> -->
@@ -342,7 +378,22 @@ if (!$userSession) {
 
                                         <div class="d-flex justify-content-between mb-5">
                                             <h5 class="text-uppercase">Total price</h5>
-                                            <h5>€ 137.00</h5>
+                                            <h5>$ <span id="totalPrice">
+                                                
+                                            <script>
+                                                // let price2 = parseInt(price1);
+                                                let totalPrice = price2 + 5;
+                                                // console.log(total);
+
+                                                if(price1 == 0 || price1 == null || price1 == '') {
+                                                    document.getElementById("totalPrice").innerHTML = " ";
+                                                } else {
+                                                    document.getElementById("totalPrice").innerHTML = totalPrice;
+                                                }
+                                            </script>
+
+                                            </span>
+                                            </h5>
                                         </div>
 
                                         <button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark">Confirm Booking</button>
