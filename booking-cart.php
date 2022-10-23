@@ -264,55 +264,71 @@ if (!$userSession) {
                                                 You haven't booked any service yet!
                                             </div>
 
-                                        <?php
+                                            <?php
                                         }
 
                                         // $conn = mysqli_connect($server, $username, $password, $dbname);
 
                                         while ($results = mysqli_fetch_array($runSql)) {
 
+                                            $_SESSION['booked_service'] = $results['servicename'];
+                                            
+
                                             function removeitem()
                                             {
-                                                
-                                                if ($results['servicename'] = "Haircut Men") {
+
+                                                if ($_SESSION['booked_service']) {
                                                     $server = "localhost";
                                                     $username = "root";
                                                     $password = "";
                                                     $dbname = "gb_01";
                                                     $usermail = $_SESSION['user_email'];
-                                                    
+                                                    $booked_service = $_SESSION['booked_service'];
+
                                                     $db = new PDO("mysql:host=$server;dbname=$dbname", $username, $password);
-                                                    $delRow = $db->prepare(" DELETE FROM `bookings` WHERE `servicename` = 'Haircut Men' && `usermail` = '$usermail' ");
+                                                    $delRow = $db->prepare(" DELETE FROM `bookings` WHERE `servicename` = '$booked_service' && `usermail` = '$usermail' ");
                                                     $delRow->execute();
 
                                                     // $refreshPage = './booking-cart.php';
                                                     // header('Location: ' . $refreshPage);
-                                                    ?>
+                                            ?>
                                                     <meta http-equiv="refresh" content="0; url = http://localhost/gb-php/booking-cart.php" />
-                                                    <?php
+                                            <?php
                                                 }
                                             }
                                             // if (array_key_exists('removeitem', $_POST)) {
                                             //     removeitem();
                                             // }
 
-                                            if(isset($_POST['removeitem'])) {
+                                            if (isset($_POST['removeitem'])) {
                                                 removeitem();
                                             }
 
-                                            
-                                        ?>
+
+                                            ?>
                                             <form method="post" class="row mb-4 d-flex justify-content-between align-items-center">
                                                 <div class="col-md-3 col-lg-3 col-xl-3">
-                                                    <h6 class="text-black"><?php echo $results['servicename']; ?></h6>
-                                                    <h6 class="text-muted mb-0"><?php echo $results['timeslots']; ?></h6>
+                                                    <h6 class="text-black">
+                                                        <?php
+                                                        echo $results['servicename'];
+                                                        $booked_service = $results['servicename'];
+                                                        ?>
+                                                    </h6>
+                                                    <h6 class="text-muted mb-0">
+                                                        <?php
+                                                        echo $results['timeslots'];
+                                                        $booked_time = $results['timeslots'];
+                                                        ?>
+                                                    </h6>
                                                 </div>
 
                                                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                    <h6 class="mb-0">$ <?php 
-                                                    echo $results['price'];
-                                                    $price1 = $results['price'];
-                                                    ?></h6>
+                                                    <h6 class="mb-0">$
+                                                        <?php
+                                                        echo $results['price'];
+                                                        $price1 = $results['price'];
+                                                        ?>
+                                                    </h6>
                                                 </div>
                                                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                                     <button class="btn btn-ouline-dark" name="removeitem" type="submit">
@@ -340,17 +356,17 @@ if (!$userSession) {
 
                                         <div class="d-flex justify-content-between mb-4">
                                             <h5 class="text-uppercase">items 1</h5>
-                                            <h5>$ 
+                                            <h5>$
                                                 <script>
                                                     let price1 = '<?php echo $price1; ?>';
                                                     let price2 = parseInt(price1);
-                                                    if(price2 == 0 || price2 == null || price1 == '' || price2 == '') {
+                                                    if (price2 == 0 || price2 == null || price1 == '' || price2 == '') {
                                                         document.write("0");
                                                     } else {
                                                         document.write(price2);
                                                     }
                                                 </script>
-                                                
+
                                             </h5>
                                         </div>
 
@@ -379,20 +395,20 @@ if (!$userSession) {
                                         <div class="d-flex justify-content-between mb-5">
                                             <h5 class="text-uppercase">Total price</h5>
                                             <h5>$ <span id="totalPrice">
-                                                
-                                            <script>
-                                                // let price2 = parseInt(price1);
-                                                let totalPrice = price2 + 5;
-                                                // console.log(total);
 
-                                                if(price1 == 0 || price1 == null || price1 == '') {
-                                                    document.getElementById("totalPrice").innerHTML = " ";
-                                                } else {
-                                                    document.getElementById("totalPrice").innerHTML = totalPrice;
-                                                }
-                                            </script>
+                                                    <script>
+                                                        // let price2 = parseInt(price1);
+                                                        let totalPrice = price2 + 5;
+                                                        // console.log(total);
 
-                                            </span>
+                                                        if (price1 == 0 || price1 == null || price1 == '') {
+                                                            document.getElementById("totalPrice").innerHTML = " ";
+                                                        } else {
+                                                            document.getElementById("totalPrice").innerHTML = totalPrice;
+                                                        }
+                                                    </script>
+
+                                                </span>
                                             </h5>
                                         </div>
 

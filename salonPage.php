@@ -255,11 +255,13 @@ if (!$userSession) {
 
                 </div>
             </div>
-            <div class="offer">
-                <div class="offer-text mb-2">
-                    <h5>OFFER</h5>
-                    <h4>20% off on festive days</h4>
-                    <a href="">Click for more details</a>
+            <div class="parent-offer d-flex flex-column">
+                <div class="offer mb-4">
+                    <div class="offer-text mb-2">
+                        <h5>OFFER</h5>
+                        <h4>20% off on festive days</h4>
+                        <a href="">Click for more details</a>
+                    </div>
                 </div>
                 <div class="fav-button">
                     <button type="button" class="btn btn-outline-danger">
@@ -360,7 +362,7 @@ if (!$userSession) {
 
 
 
-            <div class="timeSlots">
+            <!-- <div class="timeSlots">
                 <div class="available-slots">
                     <h3 class="mb-2">Available Slots</h3>
                     <div>11:00am - 11:30am <button class="btn btn-light" onclick="addTime1()">+</button></div>
@@ -378,6 +380,11 @@ if (!$userSession) {
                     <div>11:00am - 11:30am</div>
                     <div>11:00am - 11:30am</div>
                 </div>
+            </div> -->
+
+            <div class="availability d-flex flex-column justify-content-center align-items-start">
+                <h3 class="d-flex align-items-start">Check Availabiliy Here!</h3>
+                <button class="btn btn-outline-primary">Check Availability</button>
             </div>
         </div>
     </div>
@@ -399,7 +406,7 @@ if (!$userSession) {
                 <button class="btn btn-warning" type="submit" name="confirm">Confirm ?</button>
             </div>
         </form>
-                
+
     </div>
 
 
@@ -540,8 +547,6 @@ if (!$userSession) {
     </footer>
     <!-- Footer -->
 
-
-    <!-- <script src="./js/booking.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 

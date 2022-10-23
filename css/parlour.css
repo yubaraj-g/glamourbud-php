@@ -59,9 +59,11 @@
         margin-top: 0;
         font-weight: 500;
     }
-    .div1 .offer {
+    .div1 .parent-offer {
         width: 30%;
         height: 80%;
+    }
+    .div1 .offer {
         background-color: burlywood;
         padding: 0.75rem;
         border-radius: 5px;
@@ -95,7 +97,7 @@
         justify-content: flex-end;
         border-radius: 5px;
         font-size: 12px;
-        color: #3b71ca;
+        /* color: #3b71ca; */
     }
     .div2 .categories ul .selectedCatgry {
         display: flex;
@@ -137,7 +139,7 @@
     .div2 .timeSlots {
         width: 20%;
         height: fit-content;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
@@ -306,6 +308,7 @@
         height: 20vh;
         width: 100%;
         padding: 0;
+        margin-bottom: 1rem;
     }
     .div1 .offer .offer-text {
         background-color: burlywood;
@@ -365,8 +368,8 @@
         justify-content: center;
         width: 100%;
         padding: 0.75rem;
-        background-color: violet;
-        color: white;
+        /* background-color: violet; */
+        color: #3b71ca;
         border-radius: 5px;
     }
 
@@ -391,7 +394,7 @@
     }
 
     .div2 .timeSlots {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: inherit;
     }

@@ -380,8 +380,51 @@ function addS1() {
     document.getElementById("h_price").value = '26';
 }
 
-function addTime1() {
-    let addtime = '11:00am - 11:30am';
-    document.getElementById("timeperiod").innerHTML = addtime;
-    document.getElementById("h_timeperiod").value = addtime;
+// function addTime1() {
+//     let addtime = '11:00am - 11:30am';
+//     document.getElementById("timeperiod").innerHTML = addtime;
+//     document.getElementById("h_timeperiod").value = addtime;
+// }
+
+function addS2() {
+    document.getElementById("servicename").innerHTML = 'Haircut Women (above shoulders)';
+    document.getElementById("price").innerHTML = '28';
+    document.getElementById("h_servicename").value = 'Haircut Women (above shoulders)';
+    document.getElementById("h_price").value = '28';
+}
+function addS3() {
+    document.getElementById("servicename").innerHTML = 'Haircut Women (below shoulders)';
+    document.getElementById("price").innerHTML = '35';
+    document.getElementById("h_servicename").value = 'Haircut Women (below shoulders)';
+    document.getElementById("h_price").value = '35';
+}
+function addS4() {
+    document.getElementById("servicename").innerHTML = 'Highlights & Color (Full)';
+    document.getElementById("price").innerHTML = '130';
+    document.getElementById("h_servicename").value = 'Highlights & Color (Full)';
+    document.getElementById("h_price").value = '130';
+}
+function addS5() {
+    document.getElementById("servicename").innerHTML = 'Permanent Color';
+    document.getElementById("price").innerHTML = '99';
+    document.getElementById("h_servicename").value = 'Permanent Color';
+    document.getElementById("h_price").value = '99';
+}
+function addS6() {
+    document.getElementById("servicename").innerHTML = 'Full Perm';
+    document.getElementById("price").innerHTML = '99';
+    document.getElementById("h_servicename").value = 'Full Perm';
+    document.getElementById("h_price").value = '99';
+}
+function addS7() {
+    document.getElementById("servicename").innerHTML = 'Acid Repair Perm';
+    document.getElementById("price").innerHTML = '129';
+    document.getElementById("h_servicename").value = 'Acid Repair Perm';
+    document.getElementById("h_price").value = '129';
+}
+function addS8() {
+    document.getElementById("servicename").innerHTML = 'Japanese Straightning Perm';
+    document.getElementById("price").innerHTML = '290';
+    document.getElementById("h_servicename").value = 'Japanese Straightning Perm';
+    document.getElementById("h_price").value = '290';
 }
