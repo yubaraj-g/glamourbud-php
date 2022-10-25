@@ -382,10 +382,64 @@ if (!$userSession) {
                 </div>
             </div> -->
 
-            <div class="availability d-flex flex-column justify-content-center align-items-start">
+            <form class="availability d-flex flex-column justify-content-start align-items-start" method="post">
                 <h3 class="d-flex align-items-start">Check Availabiliy Here!</h3>
-                <button class="btn btn-outline-primary">Check Availability</button>
-            </div>
+                <button class="btn btn-outline-primary" onclick="availableChk()" type="submit" name="chk-available">Check Availability</button>
+
+                <div class="available-seats d-flex flex-column mt-4">
+                    <h4>Available Seats:
+
+                        <?php
+                        $associate = "davids beauty and spa";
+                        $sql4 = " SELECT * FROM tbl_seats WHERE associate = '$associate' ";
+                        $run_seats = mysqli_query($conn, $sql4);
+
+                        while ($seats_results = mysqli_fetch_array($run_seats)) {
+
+                            $total_seats = $seats_results['seats'];
+                            $t_seats = number_format($total_seats);
+                            $booked_seats = $seats_results['b_seats'];
+                            $b_seats = number_format($booked_seats);
+
+                            // $associate = $_SESSION['associate'];
+
+                            // echo $a;
+
+
+
+                            if (isset($_POST['chk-available'])) {
+
+                                if ($associate) {
+                                    if ($b_seats == null || $b_seats == 0 || $b_seats < 1) {
+                                        echo $t_seats;
+                                    } else {
+                                        $available_seats = $t_seats - $b_seats;
+                        ?>
+                                        <span id="av-seats">
+                                            <?php
+                                            echo $available_seats;
+                                            ?>
+                                        </span>
+                        <?php
+                                    }
+                                }
+                            }
+                        }
+
+                        ?>
+                        <!-- <script>
+                            let totalSeats = '';
+                            let bookedSeats = '';
+
+                            let availableSeats = parseInt(totalSeats) - parseInt(bookedSeats);
+
+                            function availableChk() {
+                                document.getElementById('av-seats').innerHTML = availableSeats;
+                            }
+                        </script> -->
+                    </h4>
+                </div>
+            </form>
         </div>
     </div>
 

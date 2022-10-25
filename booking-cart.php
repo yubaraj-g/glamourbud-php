@@ -252,6 +252,8 @@ if (!$userSession) {
                                         // $price1 = " SELECT `price` FROM bookings WHERE usermail = '$userSession' ";
 
                                         $runSql = mysqli_query($conn, $sql);
+                                        // $results = mysqli_fetch_array($runSql);
+                                        
 
                                         $sqlDel1 = " DELETE FROM `bookings` WHERE `servicename` = 'Haircut Men' ";
                                         // $runSqlDel = mysqli_query($conn, $sqlDel1);
